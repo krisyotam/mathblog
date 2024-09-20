@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Sidebar and Top Bar Layout */
+header {
+    display: flex;
+    background-color: #f0f0f0;
+    align-items: center;
+}
+
+/* Sidebar Section */
+.sidebar-left {
+    width: 40px;
+    background-color: #4e7a91;
+    height: 100vh; /* Make sidebar span the entire height */
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* Top Bar (Header Content) */
+.header-content {
+    margin-left: 40px; /* Offset by the sidebar width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    background-color: #f0f0f0;
+    width: 100%;
+    height: 60px; /* Set height for the top bar */
+    padding-bottom: 10px;
+    padding-top: 50px;
+}
+
+header h1 {
+    font-size: 35px;
+    color: #333;
+    font-family: "Georgia", "Times New Roman", Times, Serif;
+    font-weight: 400;
+    line-height: 39px;
+}
+
+.navbar {
+    margin-top: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    padding: 10px 0;
+}
+
+.navbar ul li {
+    margin-right: 15px;
+}
+
+.navbar ul li a {
+    color: #4e7a91;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    line-height: 0px;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    color: red;
+}
+
+/* Titles for Book Sections */
+
+.book-section h3 {
+    font-size: 24px; /* Adjust font size as needed */
+    margin: 20px 0 10px; /* Space above and below the header */
+    padding-bottom: 10px; /* Space between text and line */
+    border-bottom: 2px solid black; /* Solid black line */
+}
+
+
+/* Content Wrapper */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: left;
+    margin-left: 70px; /* Shift the book content to the right of the sidebar */
+    max-width: 900px;
+    padding: 20px;
+}
+
+/* Book Section */
+.book-section {
+    font-family: "Merriweather", "Georgia", "Times New Roman", Times, Serif;
+    margin: 20px 0;
+    color: #333;
+}
+
+.book-section h2 {
+    font-size: 24px; /* Smaller, elegant font for the section title */
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: #4e7a91; /* Matches your blog's blue theme */
+}
+
+.book {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.book img {
+    width: 90px; /* Slightly smaller image size */
+    height: 140px;
+    margin-right: 20px;
+    border: 1px solid #ddd; /* Adds a subtle border around the image */
+}
+
+.book h3 {
+    font-size: 20px; /* Elegant font for book titles */
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #4d4d4f;
+}
+
+.book p {
+    font-size: 15px; /* Smaller font for descriptions */
+    line-height: 1.5;
+    color: #555; /* Slightly darker for a better reading experience */
+}
+
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: transparent;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
