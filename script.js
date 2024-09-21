@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     async function fetchPost(post) {
-        const { title, date, tags, summary, content } = post;
+        const { title, date, tags, summary, content, link } = post;
 
         // Add post preview to the content wrapper
         const newPost = document.createElement('section');
@@ -42,12 +42,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 <main class="blog-post">
                     <h2>${title}</h2>
                     <p>${summary}</p>
-                    <a href="#" class="continue-reading">Continue reading →</a>
+                    <a href="${link}" class="continue-reading">Continue reading →</a>
                 </main>
             </div>
         `;
         contentWrapper.appendChild(newPost);
         posts.push(newPost); // Store the post for later use
+
+        // Trigger MathJax to reprocess the newly added content
+        MathJax.typeset();
 
         // Load recent posts
         if (recentPostsCount < 3) {
@@ -98,6 +101,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     loadPosts();
 });
+
+
 
 
 
