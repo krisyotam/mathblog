@@ -9,9 +9,11 @@ body {
     background-color: white;
     color: #333;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Make sure the body takes at least the full height of the viewport */
 }
 
-/* Blue border on the left */
 body::before {
     content: "";
     position: fixed;
@@ -87,6 +89,7 @@ header p {
     text-align: left;
     margin-left: 20px;
     max-width: 900px;
+    flex: 1; /* Allow the content to grow and fill the available space */
 }
 
 .blog-container {
@@ -264,16 +267,15 @@ header p {
 
 footer {
     text-align: center;
-    padding: 100px;
-    margin-top: 90px;
-    margin-bottom: 0;
+    padding: 20px; /* Adjust padding to your preference */
+    margin-top: auto; /* Push footer to the bottom */
     color: black; /* Footer text color */
 }
 
 .load-more-container {
-    text-align: center;
-    margin: 20px 0; /* Margin for spacing around the button */
-    padding-left: 290px;
+    text-align: center; /* Center the button within the container */
+    margin: 40px 0 20px; /* Add top margin to create space from content and bottom margin for spacing */
+    padding-left: 60px; /* Add padding to the left to push it away from the sidebar */
 }
 
 #load-more {
@@ -285,10 +287,12 @@ footer {
     cursor: pointer; /* Change cursor on hover */
     font-size: 16px; /* Font size */
     font-family: Arial, sans-serif; /* Font family */
-    margin-right: 20px; /* Ensure distance from sidebar */
+    display: inline-block; /* Make button behave as inline block */
 }
 
 #load-more:hover {
     background-color: #3b6272; /* Background color on hover */
 }
+
+
 

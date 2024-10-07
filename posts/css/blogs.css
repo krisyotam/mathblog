@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+.meta-separator {
+    height: 20px; /* Adjust this value for desired spacing */
+    width: 100%;  /* Make it full width */
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: white;
@@ -33,7 +38,6 @@ header {
     background-color: #4e7a91;
     height: 100vh; /* Make sidebar span the entire height */
     position: fixed;
-    top: 0;
 }
 
 /* Top Bar (Header Content) */
@@ -116,6 +120,10 @@ header h1 {
     font-weight: 700;
 }
 
+.post-meta {
+    margin-bottom: 20px; /* Adds space below the metadata section */
+}
+
 .blog-post p {
     margin-bottom: 15px;
 }
@@ -135,6 +143,8 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+
 
 
 
