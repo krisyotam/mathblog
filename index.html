@@ -10,15 +10,12 @@
     <script type="text/javascript">
         MathJax = {
             tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']], // Inline math delimiters
-                displayMath: [['$$', '$$'], ['\\[', '\\]']] // Display math delimiters
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
             },
             options: {
-                // Add any additional MathJax options here
                 renderActions: {
-                    findEquation: [10, function (doc) {
-                        // Your custom rendering logic can go here if needed
-                    }, '']
+                    findEquation: [10, function (doc) {}, '']
                 }
             }
         };
@@ -27,69 +24,85 @@
 </head>
 
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Kris Yotam's Math Blog</h1>
-        <p>Thoughts on number theory, numerical analysis, competitive mathematics, math history, puzzles, and pedagogy.</p>
-    </header>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="/index.html">HOME</a></li>
-            <li><a href="/pages/html/book-picks.html">BOOK PICKS</a></li>
-            <li><a href="/pages/html/projects.html">PROJECTS</a></li>
-            <li><a href="/pages/html/resources.html">RESOURCES</a></li>
-            <li><a href="/pages/html/about.html">ABOUT</a></li>
-        </ul>
-    </nav>
-
-    <!-- Blog Feed Wrapper -->
-    <div class="content-wrapper">
-        <!-- Blog Post Sections... (existing blog posts here) -->
-    </div>
-
-    <!-- Right Sidebar -->
-    <aside class="sidebar-right">
-        <section class="recent-posts">
-            <h3>Recent Posts</h3>
-            <ul>
-                <!-- Dynamically loaded recent posts will appear here -->
-            </ul>
-        </section>
-
-        <section class="archives">
-            <h3>Archives</h3>
-            <ul>
-                <li><a href="#">September 2024</a></li>
-                <li><a href="#">August 2024</a></li>
-                <li><a href="#">July 2024</a></li>
-            </ul>
-        </section>
-
-        <section class="categories">
-            <h3>Categories</h3>
-            <div class="tag-cloud">
-                <!-- Tag cloud links here -->
+    <!-- Page Wrapper for overall layout control -->
+    <div class="page-wrapper">
+        
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="blog-title">Kris Yotam's Math Blog</h1>
+                <p class="blog-subtitle">
+                    Thoughts on number theory, numerical analysis, competitive mathematics, math history, puzzles, and pedagogy.
+                </p>
             </div>
-        </section>
-    </aside>
-    
-    <script src="/script.js"></script>
+        </header>
 
-    <!-- Load More Button -->
-    <div class="load-more-container">
-        <button id="load-more">Load More Posts</button>
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="/index.html">HOME</a></li>
+                <li class="navbar-item"><a href="/pages/html/book-picks.html">BOOK PICKS</a></li>
+                <li class="navbar-item"><a href="/pages/html/projects.html">PROJECTS</a></li>
+                <li class="navbar-item"><a href="/pages/html/resources.html">RESOURCES</a></li>
+                <li class="navbar-item"><a href="/pages/html/about.html">ABOUT</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Container -->
+        <div class="main-container">
+            <!-- Blog Feed Section -->
+            <div class="content-wrapper">
+                <div class="blog-feed">
+                    <!-- Placeholder for dynamically loaded blog posts -->
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-container">
+                    <button id="load-more" class="load-more-btn">Load More Posts</button>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside class="sidebar sidebar-right">
+                <div class="sidebar-section recent-posts">
+                    <h3 class="section-title">Recent Posts</h3>
+                    <ul class="post-list">
+                        <!-- Recent posts dynamically loaded -->
+                    </ul>
+                </div>
+
+                <div class="sidebar-section archives">
+                    <h3 class="section-title">Archives</h3>
+                    <ul class="archive-list">
+                        <li><a href="#">September 2024</a></li>
+                        <li><a href="#">August 2024</a></li>
+                        <li><a href="#">July 2024</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section categories">
+                    <h3 class="section-title">Categories</h3>
+                    <div class="tag-cloud">
+                        <!-- Tag cloud links go here -->
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Made with ❤️ by Kris Yotam</p>
+            </div>
+        </footer>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Made with ❤️ by Kris Yotam</p>
-    </footer>
-    
+    <script src="/script.js"></script>
 </body>
 
 </html>
+
+
 
 
 

@@ -1,19 +1,22 @@
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
     color: #333;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Make sure the body takes at least the full height of the viewport */
+    min-height: 100vh;
 }
 
+/* Left Side Bar */
 body::before {
     content: "";
     position: fixed;
@@ -21,50 +24,45 @@ body::before {
     left: 0;
     width: 40px;
     height: 100%;
-    background-color: #4e7a91;
+    background-color: #e0e0e0;
 }
 
+/* Header Section */
 header {
     text-align: left;
-    background-color: #f0f0f0;
-    padding-left: 50px;
+    background-color: #f9f9f9;
+    padding: 20px 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 35px;
+    font-size: 32px;
     color: #333;
-    font-family: Georgie, "Times New Roman", Times, Serif;
-    font-weight: 400;
-    line-height: 39px;
+    font-family: 'Segoe UI', serif;
+    margin-bottom: 5px;
 }
 
 header p {
-    font-size: 11px;
-    font-weight: 700;
-    color: #bbbbbb;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 15px;
+    font-size: 14px;
+    color: #666;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.4;
 }
 
+/* Navigation Bar */
 .navbar {
     background-color: #fff;
-    margin-top: 10px;
-    text-align: left;
     padding-left: 50px;
-}
-
-.navbar a:focus,
-.navbar a:active {
-    color: red;
-}
-
-.navbar a:hover {
-    color: red;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-top: 10px;
 }
 
 .navbar ul {
     list-style-type: none;
     display: flex;
+    gap: 20px;
     padding: 10px 0;
 }
 
@@ -73,226 +71,241 @@ header p {
 }
 
 .navbar ul li a {
-    color: #4e7a91;
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
     font-weight: 400;
-    font-style: normal;
-    font-size: 17px;
-    line-height: 0px;
+    transition: color 0.3s ease;
 }
 
+.navbar ul li a:hover,
+.navbar ul li a:focus,
+.navbar ul li a:active {
+    color: #555;
+}
+
+/* Content Wrapper */
 .content-wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
-    margin: 20px auto;
-    background-color: #fff;
-    border-radius: 8px;
-    text-align: left;
-    margin-left: 20px;
+    margin: 30px auto;
     max-width: 900px;
-    flex: 1; /* Allow the content to grow and fill the available space */
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    margin-right: 950px;
+    flex: 1;
 }
 
+/* Blog Container and Posts */
 .blog-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Aligns content to the left */
     align-items: flex-start;
-    gap: 20px; /* Adjust spacing between blog post and sidebar */
+    gap: 20px;
 }
+
 
 .blog-post {
     flex: 3;
     max-width: 70%;
-    margin-bottom: 30px;
-}
-
-.sidebar-left {
-    flex: 1;
-    max-width: 30%;
+    background-color: #fff;
     padding: 20px;
-}
-
-.sidebar-left .post-meta,
-.sidebar-right section {
-    padding: 15px;
-    border: none;
-    margin-bottom: 10px;
-}
-
-.sidebar-left .post-meta p,
-.sidebar-right section ul {
-    margin-bottom: 10px;
-}
-
-.sidebar-left .post-meta a,
-.sidebar-right section a {
-    color: #878789;
-    text-decoration: none;
-}
-
-.sidebar-left .post-meta a:hover,
-.sidebar-right section a:hover {
-    text-decoration: underline;
-    color: #878789;
-}
-
-.sidebar-right {
-    position: absolute;
-    max-width: 300px;
-    margin-top: 0px;
-    margin-left: 950px;
-    margin-bottom: 20px;
-    top: 150px;
-}
-
-.blog-post {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.blog-post .post-meta {
-    margin-bottom: 10px;
-}
-
-.blog-post .post-meta p {
-    margin: 0;
-}
-
-.blog-post .post-meta p:first-of-type {
-    margin-bottom: 5px; /* Spacing between 'Posted on' and the title */
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .blog-post h2 {
-    font-size: 24px;
+    font-size: 22px;
     color: #333;
     margin-bottom: 10px;
-    font-family: sans-serif;
-    font-size: 20px;
-    line-height: 27px;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.3;
     font-weight: 700;
 }
 
 .blog-post p {
+    font-size: 16px;
+    color: #555;
     margin-bottom: 15px;
+    line-height: 1.6;
 }
 
 .continue-reading {
-    color: #007acc;
+    color: #333;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .continue-reading:hover {
+    color: #555;
     text-decoration: underline;
 }
 
-.share-links {
-    margin-top: 10px;
+/* Right Sidebar */
+.sidebar-right {
+    position: absolute;
+    top: 220px; /* Decrease this value to move the element up */
+    width: 300px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 1000px;
+    margin-bottom: 250px;
 }
 
-.share-links img {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    margin-right: 5px;
+.sidebar-right section {
+    margin-bottom: 20px;
+    padding: 15px;
 }
 
-/* Styling the right sidebar sections */
-.recent-posts h3,
-.archives h3,
-.categories h3 {
-    margin-bottom: 5px;
-    font-size: 12px;
-    line-height: 16px;
+.sidebar-right h3 {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 10px;
     font-weight: 700;
-    color: #4d4d4f;
 }
 
-.recent-posts ul,
-.archives ul {
-    list-style-type: none;
+.sidebar-right ul {
+    list-style: none;
+    padding-left: 0;
 }
 
-.recent-posts ul li,
-.archives ul li {
-    margin-bottom: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
+.sidebar-right ul li {
+    margin-bottom: 8px;
     font-size: 13px;
     line-height: 20px;
-    font-weight: 400;
     color: #878789;
 }
 
-/* Adding arrow icons for the recent posts and archives */
-.recent-posts li::before,
-.archives li::before {
-    content: "→"; /* Right arrow */
-    margin-right: 5px; /* Space between arrow and text */
-    color: #878789; /* Arrow color */
+.sidebar-right ul li::before {
+    content: "→";
+    margin-right: 5px;
+    color: #878789;
 }
 
-/* Hover effects for links */
-.recent-posts a:hover,
-.archives a:hover {
+.sidebar-right a {
+    color: #878789;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sidebar-right a:hover {
+    color: #666;
     text-decoration: underline;
-    color: #878789;
 }
 
-/* Categories tag cloud */
+/* Tag Cloud */
 .categories .tag-cloud {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
+    gap: 10px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #e0e0e0;
+    color: #555;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 .tag:hover {
+    background-color: #d0d0d0;
     text-decoration: underline;
 }
 
-.categories .tag {
-    display: inline-block;
-    padding: 0;
-    background-color: transparent;
-    text-decoration: none;
-    color: #878789;
-    font-weight: normal;
-}
-
-.categories .tag:hover {
-    text-decoration: underline;
-}
-
-footer {
-    text-align: center;
-    padding: 20px; /* Adjust padding to your preference */
-    margin-top: auto; /* Push footer to the bottom */
-    color: black; /* Footer text color */
-}
-
+/* Load More Button */
 .load-more-container {
-    text-align: center; /* Center the button within the container */
-    margin: 40px 0 20px; /* Add top margin to create space from content and bottom margin for spacing */
-    padding-left: 60px; /* Add padding to the left to push it away from the sidebar */
+    text-align: center;
+    margin: 40px 0 20px;
+    padding-left: 10px;
 }
+
 
 #load-more {
-    background-color: #4e7a91; /* Button background color */
-    color: white; /* Button text color */
-    border: none; /* No border */
-    padding: 10px 20px; /* Padding around the text */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Change cursor on hover */
-    font-size: 16px; /* Font size */
-    font-family: Arial, sans-serif; /* Font family */
-    display: inline-block; /* Make button behave as inline block */
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
 #load-more:hover {
-    background-color: #3b6272; /* Background color on hover */
+    background-color: #d0d0d0;
 }
+
+footer {
+    position: relative; /* Or 'static' if not fixed */
+    z-index: 10; /* For stacking context */
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #666;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 150px;  /* Footer will auto-adjust */
+}
+
+
+/* MathJax Integration */
+mjx-container {
+    font-size: 18px !important;
+    color: #333;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1200px) {
+    .content-wrapper {
+        margin-right: 0;
+        max-width: 95%;
+    }
+    
+    .sidebar-right {
+        position: relative;
+        margin: 20px auto;
+        width: 95%;
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .blog-post {
+        max-width: 100%;
+    }
+    
+    header {
+        padding: 15px 30px;
+    }
+    
+    body::before {
+        width: 20px;
+    }
+}
+
+
+
+
+
+
+
 
 
 

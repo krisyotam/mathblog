@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag: {{TAG}}</title> <!-- Placeholder for dynamic tag title -->
+    <link rel="stylesheet" href="/tags/css/tag.css">
+</head>
+<body>
+
+    <!-- Sidebar and Header Section -->
+    <header>
+        <div class="sidebar-left">
+        </div>
+        <div class="header-content">
+            <h1>Kris Yotam's Math Blog</h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/index.html">HOME</a></li>
+                    <li><a href="/pages/html/book-picks.html">BOOK PICKS</a></li>
+                    <li><a href="/pages/html/projects.html">PROJECTS</a></li>
+                    <li><a href="/pages/html/resources.html">RESOURCES</a></li>
+                    <li><a href="/pages/html/about.html">ABOUT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Tagged Posts Content -->
+    <div class="content-wrapper">
+        <section class="tag-section">
+            <h2>Tagged Posts: {{TAG}}</h2> <!-- Placeholder for dynamic tag name -->
+
+            <!-- Placeholder for dynamically inserted tagged posts -->
+            <div id="tagged-posts">
+                {{POST_LINKS}} <!-- Placeholder for post links -->
+            </div>
+
+            <!-- If there are no posts, display a message -->
+            <div id="no-posts-message" style="display: none;">
+                <p>No posts found for this tag.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Sticky Footer -->
+    <footer>
+        <p>&copy; 2024 Made with ❤️ by Kris Yotam</p>
+    </footer>
+
+    <script>
+        // Check if there are any posts
+        const postsDiv = document.getElementById('tagged-posts');
+        const noPostsMessage = document.getElementById('no-posts-message');
+
+        if (postsDiv.innerHTML.trim() === '') {
+            noPostsMessage.style.display = 'block'; // Show no posts message
+        }
+    </script>
+</body>
+</html>
+
+
+

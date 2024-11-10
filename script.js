@@ -7,39 +7,41 @@ document.addEventListener('DOMContentLoaded', async function () {
     let currentPostCount = 3; // Initial number of posts to display
     let recentPostsCount = 0; // To track how many recent posts have been loaded
 
+    // Ensure the Load More button is visible initially
+    loadMoreButton.style.display = 'none';
+
     // Function to load posts data from Markdown files
     async function loadPosts() {
-        const markdownFiles = await getMarkdownFiles(); // Fetch the list of markdown files
+        const markdownFiles = await getMarkdownFiles();
         for (const file of markdownFiles) {
             const post = await fetchPost(file);
             if (post) {
                 posts.push(post);
             }
         }
-        updateTagCloud(posts); // Update the tag cloud after loading posts
-        displayPosts(); // Display initial set of posts
+        updateTagCloud(posts);
+        displayPosts();
+        toggleLoadMoreButton();
     }
 
     // Function to get all Markdown files by checking their existence
     async function getMarkdownFiles() {
         const files = [];
-        let index = 1; // Start from post1.md
+        let index = 1;
         let fileExists = true;
 
         while (fileExists) {
-            const fileName = `post${index}.md`; // Construct the file name
+            const fileName = `post${index}.md`;
             const response = await fetch(`/posts/markdown/${fileName}`);
-
-            // Check if the file exists
             if (response.ok) {
-                files.push(fileName); // Add the file name to the list
+                files.push(fileName);
             } else {
-                fileExists = false; // Stop if a file doesn't exist
+                fileExists = false;
             }
             index++;
         }
 
-        return files; // Return the list of existing markdown files
+        return files;
     }
 
     // Function to fetch a single post and parse its content
@@ -50,7 +52,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             return null;
         }
         const content = await response.text();
-        const post = parseMarkdown(content); // Parse the markdown content to extract data
+        const post = parseMarkdown(content);
 
         // Construct link to the HTML file
         post.link = `/posts/html/${file.replace('.md', '.html')}`;
@@ -63,20 +65,18 @@ document.addEventListener('DOMContentLoaded', async function () {
         const frontMatter = {};
         let contentStartIndex = -1;
 
-        // Parse front matter
         for (let i = 0; i < lines.length; i++) {
             const line = lines[i].trim();
             if (line.startsWith('### content:')) {
-                contentStartIndex = i + 1; // The actual content starts on the next line
+                contentStartIndex = i + 1;
                 break;
             }
 
-            // Check if it's part of the front matter
             const match = line.match(/^### (\w+): (.+)$/);
             if (match) {
                 const key = match[1];
                 const value = match[2];
-                frontMatter[key] = value.split(',').map(item => item.trim()); // Handle tags
+                frontMatter[key] = value.split(',').map(item => item.trim());
             }
         }
 
@@ -85,7 +85,6 @@ document.addEventListener('DOMContentLoaded', async function () {
             return null;
         }
 
-        // Get the content part, joining lines into a single string
         const contentLines = lines.slice(contentStartIndex);
         const contentText = contentLines.join('\n').trim();
 
@@ -93,78 +92,77 @@ document.addEventListener('DOMContentLoaded', async function () {
             title: frontMatter.title || 'Untitled Post',
             date: frontMatter.date || 'Unknown Date',
             tags: frontMatter.tags || [],
-            summary: frontMatter.summary || contentText.split('\n')[0], // Use the specified summary field or the first line as fallback
-            content: contentText // Store full content if needed
+            summary: frontMatter.summary || contentText.split('\n')[0],
+            content: contentText
         };
     }
 
     // Function to update tag cloud
     function updateTagCloud(postsData) {
         const tagSet = new Set();
-        postsData.forEach(post => {
-            post.tags.forEach(tag => tagSet.add(tag));
-        });
-
-        // Clear existing tag cloud
+        postsData.forEach(post => post.tags.forEach(tag => tagSet.add(tag)));
         tagCloud.innerHTML = '';
 
-        // Create new tags with random sizes
         tagSet.forEach(tag => {
             const tagElement = document.createElement('span');
             tagElement.className = 'tag';
-            tagElement.innerText = tag;
-
-            // Generate a random size between 14px and 26px
-            const randomSize = Math.floor(Math.random() * (26 - 14 + 1)) + 14;
-            tagElement.style.fontSize = `${randomSize}px`;
-
+            const tagLink = tag.toLowerCase().replace(/\s+/g, '');
+            tagElement.innerHTML = `<a href="/tags/${tagLink}.html">${tag}</a>`;
+            tagElement.style.fontSize = `14px`;
             tagCloud.appendChild(tagElement);
         });
     }
 
     // Function to display posts based on currentPostCount
     function displayPosts() {
-        contentWrapper.innerHTML = ''; // Clear previous posts
-        posts.forEach((post, index) => {
-            if (index < currentPostCount) {
-                const newPost = document.createElement('section');
-                newPost.className = 'blog-post-wrapper';
-                newPost.innerHTML = `
-                    <div class="blog-container">
-                        <aside class="sidebar-left">
-                            <section class="post-meta">
-                                <p><strong>Posted on</strong><br>${post.date}</p>
-                                <p><strong>Tagged</strong><br>${post.tags.map(tag => `<a href="#">${tag}</a>`).join('<br>')}</p>
-                            </section>
-                        </aside>
-                        <main class="blog-post">
-                            <h2>${post.title}</h2>
-                            <p>${post.summary}</p>
-                            <a href="${post.link}" class="continue-reading">Continue reading →</a>
-                        </main>
-                    </div>
-                `;
-                contentWrapper.appendChild(newPost);
+        contentWrapper.innerHTML = '';
+        posts.slice(0, currentPostCount).forEach(post => {
+            const newPost = document.createElement('section');
+            newPost.className = 'blog-post-wrapper';
+            newPost.innerHTML = `
+                <div class="blog-container">
+                    <aside class="sidebar-left">
+                        <section class="post-meta">
+                            <p><strong>Posted on</strong><br>${post.date}</p>
+                            <p><strong>Tagged</strong><br>${post.tags.map(tag => `<a href="#">${tag}</a>`).join('<br>')}</p>
+                        </section>
+                    </aside>
+                    <main class="blog-post">
+                        <h2>${post.title}</h2>
+                        <p>${post.summary}</p>
+                        <a href="${post.link}" class="continue-reading">Continue reading →</a>
+                    </main>
+                </div>
+            `;
+            contentWrapper.appendChild(newPost);
 
-                // Load recent posts
-                if (recentPostsCount < 3) {
-                    const listItem = document.createElement('li');
-                    listItem.innerHTML = `<a href="#">${post.title}</a>`;
-                    recentPostsSection.appendChild(listItem);
-                    recentPostsCount++;
-                }
+            if (recentPostsCount < 3) {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<a href="#">${post.title}</a>`;
+                recentPostsSection.appendChild(listItem);
+                recentPostsCount++;
             }
         });
 
-        // Display "Load More" button if there are more posts to load
-        loadMoreButton.style.display = currentPostCount >= posts.length ? 'none' : 'block';
+        toggleLoadMoreButton();
 
-        // Re-process the content with MathJax
-        MathJax.typeset();
+        // Process the content with MathJax
+        if (typeof MathJax !== 'undefined') {
+            MathJax.typeset();
+        }
     }
 
-    // Load more posts when the button is clicked
-    loadMoreButton.addEventListener('click', function() {
+    // Function to toggle the visibility of the Load More button
+    function toggleLoadMoreButton() {
+        if (currentPostCount < posts.length) {
+            loadMoreButton.style.display = 'block';
+        } else {
+            loadMoreButton.style.display = 'none';
+        }
+    }
+
+    // Event listener for the Load More button
+    loadMoreButton.addEventListener('click', function () {
         currentPostCount += 3;
         displayPosts();
     });
@@ -172,6 +170,10 @@ document.addEventListener('DOMContentLoaded', async function () {
     // Initial load of posts
     loadPosts();
 });
+
+
+
+
 
 
 

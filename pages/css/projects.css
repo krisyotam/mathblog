@@ -1,61 +1,68 @@
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
     color: #333;
     line-height: 1.6;
-}
-
-/* Sidebar and Top Bar Layout */
-header {
-    display: flex;
-    background-color: #f0f0f0;
-    align-items: center;
-}
-
-/* Sidebar Section */
-.sidebar-left {
-    width: 40px;
-    background-color: #4e7a91;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-}
-
-/* Top Bar (Header Content) */
-.header-content {
-    margin-left: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-left: 10px;
-    background-color: #f0f0f0;
-    width: 100%;
-    height: 60px;
-    padding-bottom: 10px;
-    padding-top: 50px;
+    min-height: 100vh;
+}
+
+/* Left Side Bar */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 100%;
+    background-color: #e0e0e0;
+}
+
+/* Header Section */
+header {
+    text-align: left;
+    background-color: #f9f9f9;
+    padding: 20px 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 35px;
+    font-size: 32px;
     color: #333;
-    font-family: "Georgia", "Times New Roman", Times, Serif;
-    font-weight: 400;
-    line-height: 39px;
+    font-family: 'Segoe UI', serif;
+    margin-bottom: 5px;
 }
 
+header p {
+    font-size: 14px;
+    color: #666;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.4;
+}
+
+/* Navigation Bar */
 .navbar {
+    background-color: #fff;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
     margin-top: 10px;
 }
 
 .navbar ul {
     list-style-type: none;
     display: flex;
+    gap: 20px;
     padding: 10px 0;
 }
 
@@ -64,16 +71,17 @@ header h1 {
 }
 
 .navbar ul li a {
-    color: #4e7a91;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 17px;
-    line-height: 0px;
+    color: #333;
+    font-size: 16px;
     text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
 }
 
-.navbar ul li a:hover {
-    color: red;
+.navbar ul li a:hover,
+.navbar ul li a:focus,
+.navbar ul li a:active {
+    color: #555;
 }
 
 /* Content Wrapper */
@@ -97,17 +105,33 @@ header h1 {
 }
 
 .project-section h2 {
-    font-size: 24px; /* Section title */
+    font-size: 24px;
     margin-bottom: 30px;
     font-weight: 700;
     text-align: center;
-    color: #4e7a91; /* Matches your blog's blue theme */
 }
 
+/* Category Card */
+.category-card {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Card */
 .project {
     display: flex;
     align-items: flex-start;
     margin-bottom: 25px;
+    gap: 20px;
 }
 
 .project img {
@@ -115,6 +139,7 @@ header h1 {
     height: 140px;
     margin-right: 20px;
     border: 1px solid #ddd; /* Subtle border around image */
+    border-radius: 8px;
 }
 
 .project-info {
@@ -134,11 +159,12 @@ header h1 {
     color: #555;
 }
 
+/* Monochromatic Button */
 .github-link {
     display: inline-block;
     margin-top: 10px;
     padding: 8px 12px;
-    background-color: #4e7a91;
+    background-color: #666;  /* Neutral gray background */
     color: white;
     text-decoration: none;
     border-radius: 4px;
@@ -146,21 +172,19 @@ header h1 {
 }
 
 .github-link:hover {
-    background-color: #3b6272; /* Darker shade on hover */
+    background-color: #555;  /* Slightly darker gray on hover */
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    z-index: 10;
     text-align: center;
     padding: 20px;
-    background-color: transparent;
-    color: black;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    background-color: #f5f5f5;
+    color: #666;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 150px;
 }
+
+

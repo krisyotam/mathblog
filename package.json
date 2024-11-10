@@ -1,7 +1,9 @@
 {
+  "type": "module",
   "dependencies": {
     "express": "^2.5.11",
     "front-matter": "^4.0.2",
     "marked": "^14.1.2"
   }
 }
+
