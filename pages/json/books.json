@@ -1,0 +1,258 @@
+{
+    "categories": [
+        {
+            "name": "Mathematical History",
+            "books": [
+              {
+                "imgSrc": "/assets/book covers/math-through-the-ages.jpg",
+                "name": "Math Through the Ages: A Gentle History for Teachers and Others by William P. Berlinghoff and Fernando Q. Gouvêa",
+                "description": "A gentle introduction to the history of mathematics, offering an accessible and engaging narrative for educators and general readers.",
+                "imgAlt": "Math Through the Ages"
+              },
+              {
+                "imgSrc": "/assets/book covers/history-of-mathematics-burton.jpg",
+                "name": "The History of Mathematics: An Introduction by David M. Burton",
+                "description": "A comprehensive and systematic overview of the history of mathematics, from ancient civilizations to modern times, suitable for readers with a general interest in math history.",
+                "imgAlt": "The History of Mathematics: An Introduction"
+              },
+              {
+                "imgSrc": "/assets/book covers/rainbow-of-mathematics.jpg",
+                "name": "The Rainbow of Mathematics: A History of the Mathematical Sciences by Ivor Grattan-Guinness",
+                "description": "A broad exploration of the mathematical sciences, emphasizing the connections between different areas of math and their development through history.",
+                "imgAlt": "The Rainbow of Mathematics"
+              },
+              {
+                "imgSrc": "/assets/book covers/history-of-mathematics-katz.jpg",
+                "name": "A History of Mathematics: An Introduction by Victor J. Katz",
+                "description": "An introduction to the history of mathematics that balances accessibility with scholarly depth, covering major developments in mathematical thought.",
+                "imgAlt": "A History of Mathematics: An Introduction"
+              },
+              {
+                "imgSrc": "/assets/book covers/history-of-mathematics-merzbach-boyer.jpg",
+                "name": "A History of Mathematics by Uta C. Merzbach and Carl B. Boyer",
+                "description": "A widely used standard survey text providing a detailed yet accessible history of mathematics, from its origins to the present.",
+                "imgAlt": "A History of Mathematics"
+              },
+              {
+                "imgSrc": "/assets/book covers/history-of-mathematics-volume-1.jpg",
+                "name": "The History of Mathematics: A Source-based Approach, Volume 1 by June Barrow-Green, Jeremy Gray, and Robin Wilson",
+                "description": "This volume provides a source-based approach to the history of mathematics, focusing on primary texts and critical analysis of historical developments.",
+                "imgAlt": "The History of Mathematics: A Source-based Approach, Volume 1"
+              },
+              {
+                "imgSrc": "/assets/book covers/history-of-mathematics-volume-2.jpg",
+                "name": "The History of Mathematics: A Source-based Approach, Volume 2 by June Barrow-Green, Jeremy Gray, and Robin Wilson",
+                "description": "The second volume continues the source-based approach, offering insights into more recent developments in mathematics and the sources that shaped them.",
+                "imgAlt": "The History of Mathematics: A Source-based Approach, Volume 2"
+              },
+              {
+                "imgSrc": "/assets/book covers/mathematics-of-egypt-mesopotamia-china-india-islam.jpg",
+                "name": "The Mathematics of Egypt, Mesopotamia, China, India, and Islam: A Sourcebook by Victor J. Katz",
+                "description": "A collection of primary sources from various ancient civilizations, providing a deeper understanding of their contributions to mathematics.",
+                "imgAlt": "The Mathematics of Egypt, Mesopotamia, China, India, and Islam"
+              },
+              {
+                "imgSrc": "/assets/book covers/sourcebook-in-the-mathematics-of-medieval-europe.jpg",
+                "name": "Sourcebook in the Mathematics of Medieval Europe and North Africa by Victor J. Katz, Menso Folkerts, Barnabas Hughes, Roi Wagner, and J. Lennart Berggren",
+                "description": "A comprehensive sourcebook highlighting key mathematical works from medieval Europe and North Africa, shedding light on this often-overlooked period in mathematical history.",
+                "imgAlt": "Sourcebook in the Mathematics of Medieval Europe and North Africa"
+              },
+              {
+                "imgSrc": "/assets/book covers/mathematics-emerging.jpg",
+                "name": "Mathematics Emerging: A Sourcebook 1540-1900 by Jacqueline Stedall",
+                "description": "Focusing on the early modern period, this sourcebook explores the mathematical developments of the Renaissance, Enlightenment, and Industrial Revolution.",
+                "imgAlt": "Mathematics Emerging: A Sourcebook 1540-1900"
+              },
+              {
+                "imgSrc": "/assets/book covers/source-book-in-mathematics-1200-1800.jpg",
+                "name": "A Source Book in Mathematics 1200-1800 by D. J. Struik",
+                "description": "A collection of primary texts documenting significant mathematical developments between the 12th and 18th centuries, a key resource for scholars and students of mathematics.",
+                "imgAlt": "A Source Book in Mathematics 1200-1800"
+              },
+              {
+                "imgSrc": "/assets/book covers/origins-of-cauchys-rigorous-calculus.jpg",
+                "name": "The Origins of Cauchy's Rigorous Calculus by Judith V. Grabiner",
+                "description": "This book explores the development of Cauchy's rigorous approach to calculus, providing a detailed historical account of its origins and significance in modern mathematics.",
+                "imgAlt": "The Origins of Cauchy's Rigorous Calculus"
+              }
+              
+            ]
+          },      
+        {
+        "name": "Arithmetic",
+        "books": [
+          {
+            "imgSrc": "/assets/book covers/arithmetic.jpeg",
+            "name": "Arithmetic by Paul Lockhart",
+            "description": "This book presents arithmetic as a creative and intuitive exploration of mathematical thinking, emphasizing its beauty and elegance.",
+            "imgAlt": "Principles of Mathematical Analysis"
+          },
+          {
+            "imgSrc": "/assets/book covers/ray-arithmetic.jpg",
+            "name": "Ray's Arithmetic",
+            "description": "A comprehensive and systematic approach to teaching foundational arithmetic, designed to build strong computational skills.",
+            "imgAlt": "Principles of Mathematical Analysis"
+          },
+          {
+            "imgSrc": "/assets/book covers/practical-arithmetic.jpg",
+            "name": "Arithmetic for the Practical Man",
+            "description": "Focused on applying arithmetic to real-world problems, this book offers practical tools for everyday calculations and decision-making.",
+            "imgAlt": "Principles of Mathematical Analysis"
+          }
+        ]
+      },
+      {
+        "name": "Algebra",
+        "books": [
+          {
+            "imgSrc": "book1.png",
+            "name": "Basic Mathematics by Serge Lang",
+            "description": "A comprehensive book that covers basic to advanced algebra topics with rigorous proofs and applications. Perfect for students and enthusiasts alike.",
+            "imgAlt": "Introduction to Algebra"
+          },
+          {
+            "imgSrc": "/assets/pre-algebra.jpg",
+            "name": "Pre-Algebra (AoPS)",
+            "description": "This book is a comprehensive guide to group theory, rings, and fields, commonly used in undergraduate and graduate courses in algebra.",
+            "imgAlt": "Abstract Algebra"
+          }
+        ]
+      },
+      {
+        "name": "Linear Algebra",
+        "books": [
+          {
+            "imgSrc": "book4.png",
+            "name": "Linear Algebra Done Right",
+            "description": "This book provides a clean and abstract treatment of linear algebra, focusing on conceptual understanding over computational techniques.",
+            "imgAlt": "Linear Algebra Done Right"
+          }
+        ]
+      },
+      {
+        "name": "Geometry",
+        "books": [
+          {
+            "imgSrc": "book5.png",
+            "name": "Topology by James Munkres",
+            "description": "A highly regarded textbook for learning point-set topology, covering both basic and advanced topics with clarity and rigor.",
+            "imgAlt": "Topology by James Munkres"
+          }
+        ]
+      },
+      {
+        "name": "Probability",
+        "books": [
+          {
+            "imgSrc": "book8.png",
+            "name": "A First Course in Probability",
+            "description": "This book offers an in-depth introduction to probability theory, including combinatorial methods, random variables, and expectation theory.",
+            "imgAlt": "A First Course in Probability"
+          }
+        ]
+      },
+      {
+        "name": "Game Theory",
+        "books": [
+          {
+            "imgSrc": "book9.png",
+            "name": "Game Theory: An Introduction",
+            "description": "A comprehensive guide to the field of game theory, explaining concepts such as Nash equilibrium, bargaining, and cooperative games.",
+            "imgAlt": "Game Theory: An Introduction"
+          }
+        ]
+      },
+      {
+        "name": "Number Theory",
+        "books": [
+          {
+            "imgSrc": "/assets/book covers/el-number-theory.jpg",
+            "name": "Elementary Number Theory & Its Applications",
+            "description": "This book is a classic introduction to number theory, with a focus on elementary methods and covering topics such as primes, congruences, and Diophantine equations.",
+            "imgAlt": "Number Theory by Niven, Zuckerman, and Montgomery"
+          }
+        ]
+      },
+      {
+        "name": "Discrete Mathematics",
+        "books": [
+          {
+            "imgSrc": "/assets/book covers/discrete-math-epp.jpg",
+            "name": "Discrete Mathematics with Applications by Susanna Epp",
+            "description": "A popular textbook covering topics in logic, set theory, combinatorics, graph theory, and algorithms, suitable for undergraduate students.",
+            "imgAlt": "Discrete Mathematics and Its Applications"
+          }
+        ]
+      },
+      {
+        "name": "Mathematical Thinking",
+        "books": [
+          {
+            "imgSrc": "/assets/book covers/measurement.jpg",
+            "name": "Measurement by Paul Lockhart",
+            "description": "A popular textbook covering topics in logic, set theory, combinatorics, graph theory, and algorithms, suitable for undergraduate students.",
+            "imgAlt": "Discrete Mathematics and Its Applications"
+          },
+          {
+            "imgSrc": "/assets/book covers/measurement.jpg",
+            "name": "Discrete Mathematics and Its Applications",
+            "description": "A popular textbook covering topics in logic, set theory, combinatorics, graph theory, and algorithms, suitable for undergraduate students.",
+            "imgAlt": "Discrete Mathematics and Its Applications"
+          },
+          {
+            "imgSrc": "/assets/book covers/measurement.jpg",
+            "name": "Discrete Mathematics and Its Applications",
+            "description": "A popular textbook covering topics in logic, set theory, combinatorics, graph theory, and algorithms, suitable for undergraduate students.",
+            "imgAlt": "Discrete Mathematics and Its Applications"
+          }
+        ]
+      },
+      {
+        "name": "Mathematical Pedagogy",
+        "books": [
+          {
+            "imgSrc": "/assets/book covers/math-lament-paul-lockhart.jpg",
+            "name": "A Mathematicians Lament by Paul Lockhart",
+            "description": "A popular textbook covering topics in logic, set theory, combinatorics, graph theory, and algorithms, suitable for undergraduate students.",
+            "imgAlt": "Discrete Mathematics and Its Applications"
+          },
+          {
+            "imgSrc": "/assets/book covers/math-apology-hardy.jpg",
+            "name": "A Mathematicians Apology by G.H. Hardy",
+            "description": "A popular textbook covering topics in logic, set theory, combinatorics, graph theory, and algorithms, suitable for undergraduate students.",
+            "imgAlt": "Discrete Mathematics and Its Applications"
+          },
+          {
+            "imgSrc": "book7.png",
+            "name": "Discrete Mathematics and Its Applications",
+            "description": "A popular textbook covering topics in logic, set theory, combinatorics, graph theory, and algorithms, suitable for undergraduate students.",
+            "imgAlt": "Discrete Mathematics and Its Applications"
+          }
+        ]
+      },
+      {
+        "name": "Applied Mathematics",
+        "books": [
+          {
+            "imgSrc": "/assets/book covers/arithmetic.jpeg",
+            "name": "Arithmetic by Paul Lockhart",
+            "description": "sed in undergraduate math programs.",
+            "imgAlt": "Principles of Mathematical Analysis"
+          },
+          {
+            "imgSrc": "/assets/book covers/ray-arithmetic.jpg",
+            "name": "Ray's Arithmetic",
+            "description": "sed in undergraduate math programs.",
+            "imgAlt": "Principles of Mathematical Analysis"
+          },
+          {
+            "imgSrc": "/assets/book covers/practical-arithmetic.jpg",
+            "name": "Arithmetic for the Practical Man",
+            "description": "sed in undergraduate math programs.",
+            "imgAlt": "Principles of Mathematical Analysis"
+          }
+        ]
+      }
+    ]
+  }
+  

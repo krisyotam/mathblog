@@ -1,14 +1,10 @@
 document.addEventListener('DOMContentLoaded', async function () {
-    const contentWrapper = document.querySelector('.content-wrapper');
+    const contentWrapper = document.querySelector('.blog-feed'); // Correct target for the posts container
     const tagCloud = document.querySelector('.tag-cloud');
     const recentPostsSection = document.querySelector('.recent-posts ul');
-    const loadMoreButton = document.getElementById('load-more');
     const posts = [];
     let currentPostCount = 3; // Initial number of posts to display
     let recentPostsCount = 0; // To track how many recent posts have been loaded
-
-    // Ensure the Load More button is visible initially
-    loadMoreButton.style.display = 'none';
 
     // Function to load posts data from Markdown files
     async function loadPosts() {
@@ -21,7 +17,6 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
         updateTagCloud(posts);
         displayPosts();
-        toggleLoadMoreButton();
     }
 
     // Function to get all Markdown files by checking their existence
@@ -115,7 +110,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     // Function to display posts based on currentPostCount
     function displayPosts() {
-        contentWrapper.innerHTML = '';
+        contentWrapper.innerHTML = ''; // Clear previous posts
         posts.slice(0, currentPostCount).forEach(post => {
             const newPost = document.createElement('section');
             newPost.className = 'blog-post-wrapper';
@@ -144,32 +139,46 @@ document.addEventListener('DOMContentLoaded', async function () {
             }
         });
 
-        toggleLoadMoreButton();
-
         // Process the content with MathJax
         if (typeof MathJax !== 'undefined') {
             MathJax.typeset();
         }
     }
 
-    // Function to toggle the visibility of the Load More button
-    function toggleLoadMoreButton() {
+    // Event listener for infinite scroll
+    window.addEventListener('scroll', function () {
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const pageHeight = document.documentElement.scrollHeight;
+
+        if (scrollPosition >= pageHeight - 100) { // Trigger when 100px from the bottom
+            loadMorePosts();
+        }
+    });
+
+    // Function to load more posts
+    function loadMorePosts() {
         if (currentPostCount < posts.length) {
-            loadMoreButton.style.display = 'block';
-        } else {
-            loadMoreButton.style.display = 'none';
+            currentPostCount += 3;
+            displayPosts();
         }
     }
-
-    // Event listener for the Load More button
-    loadMoreButton.addEventListener('click', function () {
-        currentPostCount += 3;
-        displayPosts();
-    });
 
     // Initial load of posts
     loadPosts();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
