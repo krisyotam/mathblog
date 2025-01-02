@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <link rel="stylesheet" type="text/css" href="/pages/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/pages/css/categories.css">
+</head>
+<body>
+    <div class="container">
+        <main class="main-content">
+            <section class="categories">
+                <!-- Categories Table -->
+                <table class="categories-table" id="categories-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Posts</th>
+                        </tr>
+                    </thead>
+                    <tbody id="categories-tbody">
+                        <!-- Categories will be populated here dynamically -->
+                    </tbody>
+                </table>
+
+                <!-- Pagination -->
+                <div class="pagination" id="pagination-container">
+                    <button class="pagination-btn" id="prev-btn">←</button>
+                    <div id="pagination-numbers" class="pagination-numbers"></div>
+                    <button class="pagination-btn" id="next-btn">→</button>
+                </div>
+            </section>
+
+            <!-- Back Button -->
+            <a href="/" class="back-btn">← Back</a>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            const apiKey = 'a7df4f0f931681f8719c806cbf'; // Use your actual API key
+            const apiUrl = 'https://kris-yotam.ghost.io/ghost/api/v3/content/posts/';
+            
+            let posts = [];
+            let categoriesCount = {};
+    
+            try {
+                // Fetch all posts from the Ghost API
+                const response = await fetch(`${apiUrl}?key=${apiKey}&limit=500&include=tags`);
+                const data = await response.json();
+    
+                if (!response.ok || !data.posts || data.posts.length === 0) {
+                    console.error('No posts found or failed to fetch posts.');
+                    alert('No posts found.');
+                    return;
+                }
+    
+                // Filter posts that contain the #krispuremath tag
+                posts = data.posts.filter(post => {
+                    return post.tags.some(tag => tag.name === '#krispuremath');
+                });
+    
+                // Iterate through posts to count categories, excluding #krispuremath from display
+                posts.forEach(post => {
+                    post.tags.forEach(tag => {
+                        if (tag.name !== '#krispuremath') {
+                            categoriesCount[tag.name] = (categoriesCount[tag.name] || 0) + 1;
+                        }
+                    });
+                });
+    
+                // Render the categories table
+                const categoriesTbody = document.getElementById('categories-tbody');
+                Object.keys(categoriesCount).forEach(category => {
+                    const row = document.createElement('tr');
+    
+                    const categoryCell = document.createElement('td');
+                    const categoryLink = document.createElement('a');
+                    categoryLink.href = `/pages/html/category.html?category=${encodeURIComponent(category)}`;  // Linking to category page
+                    categoryLink.classList.add('category-link');
+                    categoryLink.textContent = category;
+                    categoryCell.appendChild(categoryLink);
+    
+                    const postsCountCell = document.createElement('td');
+                    postsCountCell.textContent = categoriesCount[category];
+    
+                    row.appendChild(categoryCell);
+                    row.appendChild(postsCountCell);
+                    categoriesTbody.appendChild(row);
+                });
+    
+                // Pagination logic (placeholder for now)
+                // Add functionality for pagination here as needed
+                console.log('Categories rendered successfully.');
+    
+            } catch (error) {
+                console.error('Error fetching categories:', error);
+                alert(`Error fetching categories: ${error.message}`);
+            }
+        });
+    </script>
+    
+
+    <script src="/pages/js/script.js"></script>
+</body>
+</html>

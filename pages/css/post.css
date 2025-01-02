@@ -1,0 +1,129 @@
+/* ----------------------------------------------
+    Post Page General Styling
+---------------------------------------------- */
+.post {
+    margin-top: 64px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6; /* Ensures consistent line spacing */
+}
+
+/* ----------------------------------------------
+    Post Title Styling
+---------------------------------------------- */
+.post-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 24px; /* Space between title and metadata */
+}
+
+/* ----------------------------------------------
+    Post Meta (Date and Category) Styling
+---------------------------------------------- */
+.post-meta {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 16px; /* Space between metadata and content */
+}
+
+/* ----------------------------------------------
+    Post Categories Styling
+---------------------------------------------- */
+.post-categories {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 24px; /* Space between categories and post content */
+    font-style: italic; /* Makes category section visually distinct */
+}
+
+/* ----------------------------------------------
+    Post Content Styling
+---------------------------------------------- */
+.post-content {
+    font-size: 18px;
+    color: var(--text-primary);
+}
+
+/* ----------------------------------------------
+    Numbered List Styling
+---------------------------------------------- */
+.post-content ol {
+    margin-left: 20px; /* Indent the entire list */
+    margin-bottom: 20px; /* Space below the list */
+    padding-left: 20px; /* Extra padding to align numbers properly */
+}
+
+.post-content ol li {
+    font-size: 16px; /* Make list items slightly smaller */
+    margin-bottom: 8px; /* Space between list items */
+}
+
+/* ----------------------------------------------
+    Unordered List Styling
+---------------------------------------------- */
+.post-content ul {
+    margin-left: 20px; /* Indent the entire list */
+    margin-bottom: 20px; /* Space below the list */
+    padding-left: 20px; /* Extra padding to align bullets properly */
+}
+
+.post-content ul li {
+    font-size: 16px; /* Make list items slightly smaller */
+    margin-bottom: 8px; /* Space between list items */
+}
+
+/* ----------------------------------------------
+    Header Styling (Markdown Headers)
+---------------------------------------------- */
+.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 {
+    margin-top: 24px; /* Space above headers */
+    margin-bottom: 12px; /* Space below headers */
+    font-weight: 600; /* Bold the headers for better visibility */
+    line-height: 1.4; /* Better line spacing for headers */
+}
+
+/* ----------------------------------------------
+    Section Title Styling
+---------------------------------------------- */
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 40px; /* Space before new section */
+    margin-bottom: 16px; /* Space after section title */
+}
+
+/* ----------------------------------------------
+    Math Expression Styling
+---------------------------------------------- */
+.math-expression {
+    font-size: 24px;
+    text-align: center; /* Centers the math expressions */
+    margin: 20px 0; /* Adds spacing above and below the expression */
+}
+
+/* ----------------------------------------------
+    Back Button Styling (Fixed at the bottom)
+---------------------------------------------- */
+.back-btn {
+    position: fixed;
+    bottom: 16px; /* Distance from the bottom */
+    left: 16px; /* Distance from the left */
+    font-size: 16px;
+    color: var(--text-primary);
+    text-decoration: none;
+    background-color: #f5f5f5;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* ----------------------------------------------
+    Back Button Hover State
+---------------------------------------------- */
+.back-btn:hover {
+    background-color: #e0e0e0;
+    color: var(--text-secondary);
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}

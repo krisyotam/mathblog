@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Blog</title>
+    <link rel="stylesheet" type="text/css" href="/pages/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-top">
+                <h1 class="site-title">Kris Yotam</h1>
+                <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav class="nav-container">
+                <div class="nav-left">
+                    <a href="/pages/html/donate.html" class="nav-link">Donate</a>
+                    <a href="/pages/html/about.html" class="nav-link">About</a>
+                </div>
+                <div class="nav-right">
+                    <a href="/pages/html/categories.html" class="nav-link">Index</a>
+                    <a href="https://mathstodon.xyz/@krisyotam" class="nav-link">Mastadon</a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <section class="hero">
+                <h2 class="hero-title">Hi.</h2>
+                <p class="hero-text">
+                    I'm Kris Yotam, a passionate pure mathematics undergrad pursuing a bachelor's at IU, and MIT via OSSU. <a class="kris-website" href="https://krisyotam.com">my other blog</a>.
+                </p>
+                <nav class="sub-navbar">
+                    <a href="/pages/html/articles.html" class="sub-nav-link">Articles</a>
+                    <a href="/pages/html/lecture-notes.html" class="sub-nav-link">Lecture Notes</a>
+                    <a href="/pages/html/talks.html" class="sub-nav-link">Talks</a>
+                    <a href="/pages/html/contact.html" class="sub-nav-link">Contact</a>
+                </nav>
+            </section>
+            
+
+            <section class="posts">
+                <div class="posts-header">
+                    <h2 class="posts-title">Latest Posts</h2>
+                    <a href="/pages/html/categories.html" class="posts-link">Read all posts</a>
+                </div>
+                <div id="posts-container"></div>
+            
+                <!-- Pagination -->
+                <div class="pagination" id="pagination-container">
+                    <button class="pagination-btn" id="prev-btn">←</button>
+                    
+                    <!-- Page numbers will be dynamically injected here -->
+                    <div id="pagination-numbers" class="pagination-numbers"></div>
+                    
+                    <button class="pagination-btn" id="next-btn">→</button>
+                </div>
+            </section>
+
+
+            <footer class="footer">
+                <p class="footer-text">
+                   Made by Kris Yotam © 2025 | All rights reserved
+                    <span> | </span>
+                    Proud student at <a href="https://www.indiana.edu/" class="footer-link" target="_blank">Indiana University</a>
+                </p>
+            </footer>
+            
+        </main>
+    </div>
+
+    <script src="/pages/js/script.js"></script>
+    <script src="/pages/js/home_feed.js"></script> <!-- Link to the new JavaScript file -->
+</body>
+</html>

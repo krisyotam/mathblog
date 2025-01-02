@@ -1,0 +1,330 @@
+/* =====================================
+   1. CSS VARIABLES & THEME SETTINGS
+===================================== */
+:root {
+    --text-primary: #000000;
+    --text-secondary: #4A4A4A;
+    --background: #F5F5F5;
+    --link-color: #333333;
+    --border-color: #D1D1D1;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --master-card-bg: rgba(255, 129, 130, 0.1);
+    --bachelor-card-bg: rgba(130, 170, 255, 0.1);
+}
+
+.dark-mode {
+    --text-primary: #E0E0E0;
+    --text-secondary: #A0AEC0;
+    --background: #121212;
+    --link-color: #B3B3B3;
+    --border-color: #2D3748;
+    --card-shadow: rgba(0, 0, 0, 0.3);
+    --master-card-bg: rgba(255, 129, 130, 0.05);
+    --bachelor-card-bg: rgba(130, 170, 255, 0.05);
+}
+
+/* =====================================
+   2. GLOBAL RESET & BASE STYLES
+===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--background);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 672px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+/* =====================================
+   3. HEADER STYLES
+===================================== */
+.header {
+    margin-bottom: 120px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.site-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: var(--text-secondary);
+}
+
+.dark-mode-toggle svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
+/* Navigation */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    gap: 16px;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+}
+
+/* =====================================
+   4. MAIN CONTENT STYLES 
+===================================== */
+.main-content {
+    margin-top: 64px;
+}
+
+/* Lecture Notes Header */
+.lecture-notes-header {
+    margin-bottom: 64px;
+}
+
+.lecture-notes-header h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    color: var(--text-primary);
+}
+
+.lecture-notes-header p {
+    font-size: 18px;
+    color: var(--text-secondary);
+    max-width: 600px;
+}
+
+/* Degree Sections */
+.degree-section {
+    margin-bottom: 80px;
+}
+
+.degree-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 32px;
+    color: var(--text-primary);
+}
+
+/* =====================================
+   5. COURSE GRID & CARDS
+===================================== */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.course-card {
+    position: relative;
+    background-color: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    min-height: 400px;
+}
+
+.course-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Course Card Image */
+.course-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7);
+    transition: filter 0.3s ease;
+}
+
+.course-card:hover .course-image {
+    filter: brightness(1);
+}
+
+/* Course Card Content */
+.course-content {
+    position: relative;
+    padding: 24px;
+    background: var(--background);
+    box-shadow: 0 -4px 6px -1px var(--card-shadow);
+}
+
+.course-code {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    font-family: monospace;
+}
+
+.course-card h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+.course-details {
+    margin-top: 16px;
+}
+
+.course-details h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.course-details p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Course Links */
+.course-links {
+    margin-top: 16px;
+}
+
+.course-links a {
+    display: inline-block;
+    margin-right: 8px;
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.course-links a:hover {
+    text-decoration: underline;
+}
+
+/* Degree-specific card styling */
+.degree-section:first-of-type .course-card {
+    background-color: var(--master-card-bg);
+}
+
+.degree-section:last-of-type .course-card {
+    background-color: var(--bachelor-card-bg);
+}
+
+/* =====================================
+   6. FOOTER STYLES
+===================================== */
+.footer {
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--background);
+    color: var(--text-secondary);
+    font-size: 14px;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-text {
+    margin: 0;
+    display: inline-block;
+}
+
+.footer-link {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* =====================================
+   7. RESPONSIVE DESIGN
+===================================== */
+@media (max-width: 768px) {
+    .container {
+        padding: 16px;
+    }
+
+    .header {
+        margin-bottom: 60px;
+    }
+
+    .lecture-notes-header h1 {
+        font-size: 36px;
+    }
+
+    .degree-section h2 {
+        font-size: 28px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-card {
+        margin-bottom: 16px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .nav-right {
+        justify-content: flex-end;
+    }
+}
+
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #555;
+}

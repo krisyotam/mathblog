@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring Mathematical Analysis</title>
+    <link rel="stylesheet" type="text/css" href="/pages/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/pages/css/post.css">
+
+    <!-- Polyfill for ES6 support in older browsers -->
+    <script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    <!-- MathJax 3.x CDN -->
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript">
+        // MathJax Configuration (for inline and display math)
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            options: {
+                renderActions: {
+                    findEquation: [10, function (doc) {}, '']
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-top">
+                <h1 class="site-title">Kris Yotam</h1>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <article class="post">
+                <h2 id="post-title" class="post-title">Loading...</h2>
+                <p id="post-meta" class="post-meta">Loading...</p>
+
+                <!-- Categories Section -->
+                <p id="post-categories" class="post-categories">Loading categories...</p>
+
+                <section id="post-content" class="post-content">
+                    Loading content...
+                </section>
+            </article>
+
+            <a href="/" class="back-btn">← Back</a>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            // Extract post slug or post ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const postSlug = urlParams.get('slug'); // slug-based link
+            const postId = urlParams.get('id'); // ID-based link
+
+            console.log('Extracted slug:', postSlug);
+            console.log('Extracted ID:', postId);
+
+            const apiKey = 'a7df4f0f931681f8719c806cbf'; // Use your actual API key
+            const apiUrl = 'https://kris-yotam.ghost.io/ghost/api/v3/content/posts/';
+
+            // Check if we have a post slug or ID
+            if (!postSlug && !postId) {
+                console.error('No post slug or ID found in URL.');
+                alert('No post slug or ID found in URL.');
+                return;
+            }
+
+            // Determine API URL based on which parameter (slug or id) is present
+            let fetchUrl = '';
+            if (postSlug) {
+                // Fetch by slug
+                fetchUrl = `${apiUrl}?key=${apiKey}&filter=slug:${postSlug}&include=tags&limit=500`;
+                console.log('Fetching by slug URL:', fetchUrl);
+            } else if (postId) {
+                // Fetch by ID
+                fetchUrl = `${apiUrl}${postId}/?key=${apiKey}&include=tags`;
+                console.log('Fetching by ID URL:', fetchUrl);
+            }
+
+            try {
+                const response = await fetch(fetchUrl);
+                console.log('API Response status:', response.status);
+
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch post data. Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                console.log('API Response data:', data);
+
+                if (!data.posts || data.posts.length === 0) {
+                    console.error('No posts found in the API response.');
+                    alert('No posts found in the API response.');
+                    return;
+                }
+
+                const post = data.posts[0];
+                console.log('Fetched post:', post);
+
+                // Set the page title dynamically
+                document.title = post.title;
+                document.getElementById('post-title').innerText = post.title;
+
+                // Set the post metadata (date)
+                const postMeta = `Published on: ${new Date(post.published_at).toLocaleDateString()}`;
+                document.getElementById('post-meta').innerText = postMeta;
+
+                // Set the post content
+                const contentWrapper = document.getElementById('post-content');
+                contentWrapper.innerHTML = post.html; // This will include the full content of the post
+
+                // Categories: Loop through the tags and display them, excluding internal tags like 'krispuremath'
+                const categories = post.tags
+                    .filter(tag => tag.name !== '#krispuremath') // Exclude internal tag
+                    .map(tag => tag.name)
+                    .join(', ');
+                console.log('Categories:', categories);
+                document.getElementById('post-categories').innerText = `Category: ${categories}`;
+
+                // Trigger MathJax rendering for any math content
+                MathJax.typeset();
+            } catch (error) {
+                console.error('Error fetching the post data:', error);
+                alert(`Error fetching the post: ${error.message}`);
+            }
+        });
+    </script>
+
+</body>
+</html>

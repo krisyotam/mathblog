@@ -1,0 +1,132 @@
+/* =============== RESET AND GLOBAL STYLES =============== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--background);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* =============== CATEGORIES TABLE STYLES =============== */
+.categories {
+    margin-top: 64px;
+}
+
+.categories-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 32px;
+}
+
+.categories-table th, .categories-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.categories-table th {
+    font-weight: 600; /* Thicker but not fully bold */
+    color: var(--text-primary);
+}
+
+.category-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: normal; /* Normal weight for links */
+}
+
+.category-link:hover {
+    color: var(--link-color);
+    text-decoration: none; /* Removed underline on hover */
+}
+
+td {
+    font-weight: 600; /* Thicker but not fully bold */
+}
+
+.categories-table td:nth-child(2) {
+    font-weight: normal; /* Normal weight for the numbers in the "Posts" column */
+}
+
+/* =============== BACK BUTTON STYLE =============== */
+.back-btn {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    font-size: 14px;
+    color: var(--text-primary);
+    background-color: var(--background);
+    border: 1px solid var(--text-secondary);
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    border-radius: 4px;
+    text-decoration: none; /* Removed underline */
+}
+
+.back-btn:hover {
+    background-color: var(--text-primary);
+    color: var(--background);
+}
+
+/* =============== PAGINATION STYLES =============== */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+    gap: 8px;
+}
+
+.pagination-btn {
+    background-color: transparent;
+    border: 1px solid var(--text-secondary);
+    color: var(--text-primary);
+    font-size: 14px;
+    padding: 4px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    border-radius: 4px;
+}
+
+.pagination-btn:hover {
+    background-color: var(--text-primary);
+    color: var(--background);
+}
+
+#pagination-numbers {
+    display: flex;
+    gap: 4px;
+}
+
+.pagination-number {
+    background-color: var(--background);
+    border: 1px solid var(--text-secondary);
+    color: var(--text-primary);
+    font-size: 14px;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.pagination-number:hover {
+    background-color: var(--text-primary);
+    color: var(--background);
+}
+
+.pagination-number.active {
+    background-color: var(--text-primary);
+    color: var(--background);
+}
+
+/* =============== REMOVE BOLD TEXT FOR PAGE TITLES =============== */
+h1, h2, h3, h4, h5, h6, .pagination-number {
+    font-weight: normal; /* Remove bold styling for page titles and pagination numbers */
+}

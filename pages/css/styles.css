@@ -1,0 +1,344 @@
+/* ===============  CSS VARIABLES =============== */
+:root {
+    --text-primary: #000000;       /* Primary text color (dark gray) */
+    --text-secondary: #4A4A4A;     /* Secondary text color (lighter gray) */
+    --background: #F5F5F5;         /* Light gray background */
+    --link-color: #333333;         /* Monochromatic gray color for links */
+    --border-color: #D1D1D1;       /* Light gray border color */
+}
+
+/* Dark Mode Variables */
+.dark-mode {
+    --text-primary: #E0E0E0;       /* Light gray text color for dark mode */
+    --text-secondary: #A0AEC0;     /* Lighter gray text for secondary info */
+    --background: #121212;         /* Matte black background for dark mode */
+    --link-color: #B3B3B3;         /* Lighter gray for links in dark mode */
+    --border-color: #2D3748;       /* Darker borders for contrast */
+}
+
+/* =============== GLOBAL STYLES =============== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Basic Styling */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--background);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* =============== CONTAINER =============== */
+.container {
+    max-width: 672px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+/* =============== HEADER =============== */
+.header {
+    margin-bottom: 120px;
+}
+
+/* Top Header Section (Title + Dark Mode Toggle) */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.site-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: var(--text-secondary);
+}
+
+.dark-mode-toggle svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
+/* =============== NAVIGATION =============== */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    gap: 16px;
+}
+
+/* Navigation Link Styles */
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+}
+
+/* =============== MAIN CONTENT =============== */
+.main-content {
+    margin-top: 64px;
+}
+
+/* =============== HERO SECTION =============== */
+.hero {
+    margin-bottom: 160px;
+}
+
+.hero-title {
+    font-size: 72px;
+    font-weight: bold;
+    margin-bottom: 32px;
+}
+
+.hero-text {
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+.hero-text a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* ===================== POSTS SECTION ===================== */
+.posts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.posts-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Read all posts link */
+.posts-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 16px;
+}
+
+.posts-link:hover {
+    color: var(--text-primary);
+}
+
+.post {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Title */
+.post-title {
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+    text-decoration: none;
+    display: block;
+}
+
+.post-title:hover {
+    color: var(--text-secondary);
+}
+
+/* Preview Text */
+.post-preview {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+}
+
+/* Post Meta (Date & Read Time) */
+.post-meta {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 8px; /* Space between preview and post meta */
+}
+
+.post-meta .post-date {
+    display: inline-block;
+    margin-right: 8px; /* Space between date and read time */
+}
+
+/* =============== MEDIA QUERIES =============== */
+@media (max-width: 768px) {
+    .container {
+        padding: 16px;
+    }
+
+    .header {
+        margin-bottom: 60px;
+    }
+
+    .hero {
+        margin-bottom: 80px;
+    }
+
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .nav-right {
+        justify-content: flex-end;
+    }
+}
+
+/* =============== PAGINATION STYLES =============== */
+.pagination {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 32px;
+    gap: 8px; /* Space between elements */
+}
+
+/* Left and Right Pagination Arrow */
+.pagination-btn {
+    background-color: transparent;
+    border: 1px solid var(--text-secondary);
+    color: var(--text-primary);
+    font-size: 14px;
+    padding: 4px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    border-radius: 4px;
+}
+
+.pagination-btn:hover {
+    background-color: var(--text-primary);
+    color: var(--background);
+}
+
+#pagination-numbers {
+    display: flex;
+    gap: 4px;
+}
+
+/* Bento Box style for the page numbers */
+.pagination-number {
+    background-color: var(--background);
+    border: 1px solid var(--text-secondary);
+    color: var(--text-primary);
+    font-size: 14px;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.pagination-number:hover {
+    background-color: var(--text-primary);
+    color: var(--background);
+}
+
+.pagination-number.active {
+    background-color: var(--text-primary);
+    color: var(--background);
+}
+
+/* ===================== Footer ===================== */
+.footer {
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--background);
+    color: var(--text-secondary);
+    font-size: 14px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.footer-text {
+    margin: 0;
+    display: inline-block;
+}
+
+.footer-link {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+
+/* ===================== SUB-NAVBAR ===================== */
+.sub-navbar {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center;
+    margin-top: 0; /* Remove space above */
+    padding: 0; /* Remove padding around the navbar */
+    gap: 16px; /* Small gap between items */
+    background-color: var(--background); /* Match the page background */
+}
+
+.sub-nav-link {
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 500; /* Increased font weight for better visibility */
+    text-decoration: none; /* Remove default underline */
+    padding: 4px 0; /* Reduced padding for minimal spacing */
+    position: relative;
+    transition: color 0.3s;
+}
+
+.sub-nav-link:hover {
+    color: var(--text-secondary); /* Gray color on hover */
+}
+
+.sub-nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-primary);
+    bottom: 0; /* Align the hover bar to the bottom of the text */
+    left: 0; /* Align the bar to the left of the text */
+    transition: width 0.3s ease-in-out;
+}
+
+.sub-nav-link:hover::after {
+    width: 100%; /* Expand the hover bar to full text width */
+}
