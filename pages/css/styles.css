@@ -342,3 +342,11 @@ body {
 .sub-nav-link:hover::after {
     width: 100%; /* Expand the hover bar to full text width */
 }
+
+/* Add these styles to your existing CSS */
+
+/* When dark mode is enabled */
+body.dark-mode {
+    background-color: var(--background);
+    color: var(--text-primary);
+}

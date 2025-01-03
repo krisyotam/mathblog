@@ -11,6 +11,12 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     transition: background-color 0.3s, color 0.3s;
+    max-width: 900px; /* Set max-width for better layout control */
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* =============== CATEGORY POSTS PAGE STYLES =============== */
@@ -22,34 +28,44 @@ body {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 32px;
+    table-layout: fixed; /* Ensures even column widths */
 }
 
-.posts-table th, .posts-table td {
-    padding: 12px;
+/* Shading for the table header */
+.posts-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: bold; /* Matches the original bold style */
+    color: var(--text-primary);
+    background-color: #f4f4f4; /* Light background for header */
+    border-bottom: 2px solid var(--border-color);
+}
+
+/* Table body cells */
+.posts-table td {
+    padding: 1rem; /* Increased padding for better spacing */
     text-align: left;
     border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary); /* Matches text color */
 }
 
-.posts-table th {
-    font-weight: 600; /* Thicker but not fully bold */
-    color: var(--text-primary);
+/* Hover effect for rows */
+.posts-table tr:hover {
+    background-color: #f5f5f5;
 }
 
+/* Style for post links */
 .post-link {
-    color: var(--text-primary); /* No underlines or changes in color */
-    text-decoration: none; /* No underline */
-    font-weight: normal; /* Normal weight for links */
+    color: var(--text-primary);
+    text-decoration: none; /* No underline by default */
+    font-weight: normal;
 }
 
 .post-link:hover {
-    color: var(--text-primary); /* No hover effect */
-    text-decoration: none; /* No underline on hover */
+    color: var(--link-color); /* Only color change on hover, no underline */
 }
 
-td {
-    font-weight: 600; /* Thicker but not fully bold */
-}
-
+/* Adjust post column font weight */
 .posts-table td:nth-child(2) {
     font-weight: normal; /* Normal weight for the "Published Date" column */
 }
