@@ -15,7 +15,6 @@
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <script type="text/javascript">
-        // MathJax Configuration (for inline and display math)
         MathJax = {
             tex: {
                 inlineMath: [['$', '$'], ['\\(', '\\)']],
@@ -31,102 +30,90 @@
 </head>
 <body>
     <div class="container">
-        <header class="header">
-            <div class="header-top">
-                <h1 class="site-title">Kris Yotam</h1>
+        <header class="header-nav">
+            <a href="/pages/html/categories.html" class="back-link">← ALL ARTICLES</a>
+            <div class="post-meta-header">
+                <span id="post-categories">Loading...</span>
+                <span class="meta-separator">•</span>
+                <span id="post-date">Loading...</span>
+                <span class="meta-separator">•</span>
+                <span id="read-time">Loading...</span>
             </div>
         </header>
 
         <main class="main-content">
             <article class="post">
-                <h2 id="post-title" class="post-title">Loading...</h2>
-                <p id="post-meta" class="post-meta">Loading...</p>
-
-                <!-- Categories Section -->
-                <p id="post-categories" class="post-categories">Loading categories...</p>
-
+                <h1 id="post-title" class="post-title">Loading...</h1>
                 <section id="post-content" class="post-content">
                     Loading content...
                 </section>
             </article>
-
-            <a href="/" class="back-btn">← Back</a>
         </main>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', async function () {
-            // Extract post slug or post ID from URL
             const urlParams = new URLSearchParams(window.location.search);
-            const postSlug = urlParams.get('slug'); // slug-based link
-            const postId = urlParams.get('id'); // ID-based link
+            const postSlug = urlParams.get('slug');
+            const postId = urlParams.get('id');
 
-            console.log('Extracted slug:', postSlug);
-            console.log('Extracted ID:', postId);
-
-            const apiKey = 'a7df4f0f931681f8719c806cbf'; // Use your actual API key
+            const apiKey = 'a7df4f0f931681f8719c806cbf';
             const apiUrl = 'https://kris-yotam.ghost.io/ghost/api/v3/content/posts/';
 
-            // Check if we have a post slug or ID
             if (!postSlug && !postId) {
                 console.error('No post slug or ID found in URL.');
                 alert('No post slug or ID found in URL.');
                 return;
             }
 
-            // Determine API URL based on which parameter (slug or id) is present
             let fetchUrl = '';
             if (postSlug) {
-                // Fetch by slug
                 fetchUrl = `${apiUrl}?key=${apiKey}&filter=slug:${postSlug}&include=tags&limit=500`;
-                console.log('Fetching by slug URL:', fetchUrl);
             } else if (postId) {
-                // Fetch by ID
                 fetchUrl = `${apiUrl}${postId}/?key=${apiKey}&include=tags`;
-                console.log('Fetching by ID URL:', fetchUrl);
             }
 
             try {
                 const response = await fetch(fetchUrl);
-                console.log('API Response status:', response.status);
-
                 if (!response.ok) {
                     throw new Error(`Failed to fetch post data. Status: ${response.status}`);
                 }
 
                 const data = await response.json();
-                console.log('API Response data:', data);
-
                 if (!data.posts || data.posts.length === 0) {
-                    console.error('No posts found in the API response.');
-                    alert('No posts found in the API response.');
-                    return;
+                    throw new Error('No posts found in the API response.');
                 }
 
                 const post = data.posts[0];
-                console.log('Fetched post:', post);
-
-                // Set the page title dynamically
+                
+                // Set page title
                 document.title = post.title;
                 document.getElementById('post-title').innerText = post.title;
 
-                // Set the post metadata (date)
-                const postMeta = `Published on: ${new Date(post.published_at).toLocaleDateString()}`;
-                document.getElementById('post-meta').innerText = postMeta;
+                // Format and set the date
+                const postDate = new Date(post.published_at).toLocaleDateString('en-US', {
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric'
+                });
+                document.getElementById('post-date').innerText = postDate;
 
-                // Set the post content
-                const contentWrapper = document.getElementById('post-content');
-                contentWrapper.innerHTML = post.html; // This will include the full content of the post
+                // Set post content
+                document.getElementById('post-content').innerHTML = post.html;
 
-                // Categories: Loop through the tags and display them, excluding internal tags like 'krispuremath'
+                // Calculate and set read time (assuming 200 words per minute)
+                const wordCount = post.html.replace(/<[^>]*>/g, '').split(/\s+/).length;
+                const readTimeMinutes = Math.ceil(wordCount / 200);
+                document.getElementById('read-time').innerText = `${readTimeMinutes} MIN READ`;
+
+                // Set categories
                 const categories = post.tags
-                    .filter(tag => tag.name !== '#krispuremath') // Exclude internal tag
+                    .filter(tag => tag.name !== '#krispuremath')
                     .map(tag => tag.name)
                     .join(', ');
-                console.log('Categories:', categories);
-                document.getElementById('post-categories').innerText = `Category: ${categories}`;
+                document.getElementById('post-categories').innerText = categories;
 
-                // Trigger MathJax rendering for any math content
+                // Trigger MathJax rendering
                 MathJax.typeset();
             } catch (error) {
                 console.error('Error fetching the post data:', error);
@@ -134,6 +121,5 @@
             }
         });
     </script>
-
 </body>
 </html>
