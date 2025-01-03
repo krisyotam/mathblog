@@ -2,7 +2,7 @@
 :root {
     --text-primary: #000000;       /* Primary text color (dark gray) */
     --text-secondary: #4A4A4A;     /* Secondary text color (lighter gray) */
-    --background: #F5F5F5;         /* Light gray background */
+    --background: #FFFFFF;         /* Light gray background */
     --link-color: #333333;         /* Monochromatic gray color for links */
     --border-color: #D1D1D1;       /* Light gray border color */
 }
