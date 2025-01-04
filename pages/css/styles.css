@@ -54,7 +54,7 @@ body {
 
 .site-title {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 400px;
     color: var(--text-primary);
 }
 
@@ -137,8 +137,15 @@ body {
 }
 
 .posts-title {
-    font-size: 24px;
-    font-weight: bold;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 16px;
+}
+
+.posts-title:hover {
+    color: var(--text-primary);
 }
 
 /* Read all posts link */
@@ -146,7 +153,7 @@ body {
     color: var(--text-secondary);
     text-decoration: none;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 500px;
     margin-top: 16px;
 }
 
@@ -283,9 +290,15 @@ body {
     color: var(--text-secondary);
     font-size: 14px;
     border-top: 1px solid var(--border-color);
-    display: flex;
-    justify-content: center;
+    display: flex; /* Change to flexbox for alignment */
+    justify-content: space-between; /* Align left and right sections */
     gap: 16px;
+}
+
+.footer-left,
+.footer-right {
+    display: flex;
+    align-items: center; /* Ensure vertical alignment of text */
 }
 
 .footer-text {
@@ -303,6 +316,7 @@ body {
 }
 
 
+
 /* ===================== SUB-NAVBAR ===================== */
 .sub-navbar {
     display: flex;
@@ -311,13 +325,12 @@ body {
     margin-top: 0; /* Remove space above */
     padding: 0; /* Remove padding around the navbar */
     gap: 16px; /* Small gap between items */
-    background-color: var(--background); /* Match the page background */
 }
 
 .sub-nav-link {
     color: var(--text-primary);
     font-size: 16px;
-    font-weight: 500; /* Increased font weight for better visibility */
+    font-weight: 400; /* Increased font weight for better visibility */
     text-decoration: none; /* Remove default underline */
     padding: 4px 0; /* Reduced padding for minimal spacing */
     position: relative;
@@ -349,4 +362,21 @@ body {
 body.dark-mode {
     background-color: var(--background);
     color: var(--text-primary);
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #E2E8F0;
+    color: var(--text-primary);
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 32px;
+}
+
+.back-btn:hover {
+    background-color: var(--border-color);
+    cursor: pointer;
 }

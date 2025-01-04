@@ -138,7 +138,7 @@ body {
 }
 
 .degree-section h2 {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 32px;
     color: var(--text-primary);
@@ -191,7 +191,7 @@ body {
 }
 
 .course-code {
-    font-size: 14px;
+    font-size: 10px;
     color: var(--text-secondary);
     margin-bottom: 8px;
     font-family: monospace;
@@ -232,20 +232,30 @@ body {
     color: var(--link-color);
     text-decoration: none;
     font-size: 14px;
+    position: relative; /* Needed for absolute positioning of the line */
 }
 
-.course-links a:hover {
-    text-decoration: underline;
+.course-links a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; /* Smooth animation */
 }
+
+.course-links a:hover::before {
+    width: 100%; /* Expands to full width on hover */
+}
+
 
 /* Degree-specific card styling */
 .degree-section:first-of-type .course-card {
     background-color: var(--master-card-bg);
 }
 
-.degree-section:last-of-type .course-card {
-    background-color: var(--bachelor-card-bg);
-}
 
 /* =====================================
    6. FOOTER STYLES
