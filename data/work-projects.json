@@ -1,0 +1,31 @@
+[
+  {
+    "title": "SumTex",
+    "description": "A nextjs application built to provide simple access to verified advanced mathematics problems.",
+    "link": "https://github.com/krisyotam/sumtex",
+    "year": "2025",
+    "status": "Active"
+  },
+  {
+    "title": "MindMath",
+    "description": "A project for beginner to olympiad level mental math practice.",
+    "link": "https://github.com/krisyotam/MindMath",
+    "year": "2024",
+    "status": "Completed"
+  },
+  {
+    "title": "Classical Math",
+    "description": "A return to ad-fontes mathematics education.",
+    "link": "https://github.com/krisyotam/classicalmath",
+    "year": "2024",
+    "status": "Active"
+  },
+  {
+    "title": "MathProgs",
+    "description": "interesting math projects made in scientific languages.",
+    "link": "https://github.com/krisyotam/mathprogs",
+    "year": "2024",
+    "status": "Active"
+  }
+]
+
