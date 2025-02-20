@@ -15,6 +15,7 @@ import {
   DollarSign,
   Sun,
   Moon,
+  Sigma,
 } from "lucide-react"
 import { useTheme } from "./theme-provider"
 
@@ -38,18 +39,19 @@ export function CommandMenu() {
   const items: { [key: string]: CommandItem[] } = {
     Pages: [
       { icon: Home, label: "Home", action: () => router.push("/") },
-      { icon: User, label: "About", action: () => router.push("/about") },
       { icon: FileText, label: "Index", action: () => router.push("/blog") },
-      { icon: Mic, label: "Talks", action: () => router.push("/talks") },
-      { icon: Mail, label: "Contact", action: () => router.push("/contact") },
-      { icon: DollarSign, label: "Donate", action: () => router.push("/donate") },
+      { icon: Clock, label: "Now", action: () => router.push("/now") },
+      { icon: Sigma, label: "Theorems", action: () => router.push("/theorems") },
+      { icon: Book, label: "Workbooks", action: () => router.push("/workbooks") },
+      { icon: FileText, label: "Lecture Notes", action: () => router.push("/lecture-notes") },
     ],
     Info: [
+      { icon: Mic, label: "Talks", action: () => router.push("/talks") },
       { icon: Book, label: "Notes", action: () => router.push("/notes") },
-      { icon: Clock, label: "Now", action: () => router.push("/now") },
+      { icon: User, label: "About", action: () => router.push("/about") },
       { icon: Briefcase, label: "Work", action: () => router.push("/work") },
-      { icon: FileText, label: "Lecture Notes", action: () => router.push("/lecture-notes") },
-      { icon: Book, label: "Workbooks", action: () => router.push("/workbooks") },
+      { icon: Mail, label: "Contact", action: () => router.push("/contact") },
+      { icon: DollarSign, label: "Donate", action: () => router.push("/donate") },
     ],
   }
 
@@ -140,7 +142,7 @@ export function CommandMenu() {
             className="w-full bg-transparent px-3 py-2 text-sm outline-none border-b placeholder:text-muted-foreground focus:border-primary transition-colors"
             aria-label="Search commands"
           />
-          <ul className="max-h-[300px] overflow-y-auto p-2">
+          <ul className="max-h-[400px] overflow-y-auto p-2">
             {Object.entries(filteredItems).map(([category, categoryItems]) => (
               <li key={category} className="mb-4">
                 <h2 className="px-2 text-xs font-semibold text-muted-foreground mb-2">{category}</h2>

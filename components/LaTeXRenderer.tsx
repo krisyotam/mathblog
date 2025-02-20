@@ -1,38 +1,65 @@
-'use client'
+"use client"
 
-import React, { useEffect, useRef } from 'react';
-import katex from 'katex';
-import 'katex/dist/katex.min.css';
+import "katex/dist/katex.min.css"
+import { renderToString } from "katex"
+import { useEffect, useState, memo } from "react"
 
 interface LaTeXRendererProps {
-  latex: string;
-  displayMode: boolean;
+  content: string
+  displayMode: boolean
 }
 
-export const LaTeXRenderer: React.FC<LaTeXRendererProps> = ({ latex, displayMode }) => {
-  const containerRef = useRef<HTMLSpanElement>(null);
+const LaTeXRenderer = memo(({ content, displayMode }: LaTeXRendererProps) => {
+  const [renderedContent, setRenderedContent] = useState<string>(content)
 
   useEffect(() => {
-    if (containerRef.current) {
+    const decodeHtml = (html: string) => {
+      const txt = document.createElement("textarea")
+      txt.innerHTML = html
+      return txt.value
+    }
+
+    const renderLatex = (text: string): string => {
+      // First decode any HTML entities
+      const decodedText = decodeHtml(text)
+
       try {
-        const cleanLatex = displayMode ? latex.slice(2, -2) : latex.slice(1, -1);
-        katex.render(cleanLatex, containerRef.current, {
-          throwOnError: false,
+        // Remove the delimiters based on the display mode
+        const latex = displayMode
+          ? decodedText.replace(/^\$\$([\s\S]*)\$\$$/, "$1")
+          : decodedText.replace(/^\$([\s\S]*)\$$/, "$1")
+
+        return renderToString(latex.trim(), {
           displayMode: displayMode,
+          throwOnError: false,
           strict: false,
-          trust: true,
-        });
+          output: "html",
+          maxSize: 10,
+          maxExpand: 1000,
+          // Add specific KaTeX options to control sizing
+          macros: {
+            "\\eqinline": "\\style{display: inline-block;}",
+          },
+        })
       } catch (error) {
-        console.error('KaTeX rendering error:', error);
-        if (containerRef.current) {
-          containerRef.current.textContent = latex;
-        }
+        console.error("LaTeX rendering error:", error)
+        return text
       }
     }
-  }, [latex, displayMode]);
 
-  return <span ref={containerRef} />;
-};
+    setRenderedContent(renderLatex(content))
+  }, [content, displayMode])
 
-export default LaTeXRenderer;
+  return (
+    <span
+      aria-live="polite"
+      className={displayMode ? "latex-display" : "latex-inline"}
+      dangerouslySetInnerHTML={{ __html: renderedContent }}
+    />
+  )
+})
+
+LaTeXRenderer.displayName = "LaTeXRenderer"
+
+export default LaTeXRenderer
 

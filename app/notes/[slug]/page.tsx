@@ -55,7 +55,7 @@ export default async function NotePage({ params }: { params: { slug: string } })
       .join(', ');
 
     return (
-      <main className="min-h-screen px-4 py-8 bg-background text-foreground dark:bg-background dark:text-foreground">
+      <main className="min-h-screen px-4 py-8 bg-background text-foreground notes-page">
         <nav className="max-w-2xl mx-auto mb-16">
           <div className="flex items-center space-x-1 text-sm font-mono">
             <Link href="/" className="text-gray-500 dark:text-gray-400">@krisyotam</Link>

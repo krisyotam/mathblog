@@ -171,3 +171,81 @@ body {
     @apply bg-muted text-foreground font-bold;
   }
 }
+
+@layer base {
+  .notes-page * {
+    @apply border-border;
+  }
+  .notes-page body {
+    @apply bg-background text-foreground;
+  }
+
+  .notes-page h1, .notes-page h2, .notes-page h3, .notes-page h4, .notes-page h5, .notes-page h6 {
+    @apply font-bold text-foreground;
+  }
+
+  .notes-page h1 {
+    @apply text-4xl mb-4 mt-8;
+  }
+
+  .notes-page h2 {
+    @apply text-3xl mb-4 mt-6;
+  }
+
+  .notes-page h3 {
+    @apply text-2xl mb-3 mt-5;
+  }
+
+  .notes-page h4 {
+    @apply text-xl mb-2 mt-4;
+  }
+
+  .notes-page p {
+    @apply mb-4 leading-7;
+  }
+
+  .notes-page ul, .notes-page ol {
+    @apply list-disc list-inside mb-4 pl-6;
+  }
+
+  .notes-page ol {
+    list-style-type: decimal;
+  }
+
+  .notes-page li {
+    @apply mb-1;
+  }
+
+  .notes-page blockquote {
+    @apply border-l-4 pl-4 italic text-muted-foreground mb-4;
+    border-color: var(--muted-foreground);
+  }
+
+  .notes-page pre {
+    @apply bg-muted text-foreground rounded p-4 overflow-auto;
+  }
+
+  .notes-page code {
+    @apply bg-muted text-foreground px-1 rounded;
+  }
+
+  .notes-page a {
+    @apply text-primary hover:no-underline;
+  }
+
+  .notes-page img {
+    @apply max-w-full rounded;
+  }
+
+  .notes-page table {
+    @apply w-full border-collapse border border-muted-foreground;
+  }
+
+  .notes-page th, .notes-page td {
+    @apply border border-muted-foreground px-4 py-2;
+  }
+
+  .notes-page th {
+    @apply bg-muted text-foreground font-bold;
+  }
+}

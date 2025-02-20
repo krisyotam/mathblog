@@ -4,6 +4,7 @@ export const dynamic = 'force-dynamic';
 import Link from 'next/link'
 import { CommandMenu } from '@/components/command-menu'
 import { GhostPost } from '@/utils/ghost'
+import { ContentRenderer } from '@/components/ContentRenderer';
 
 const apiKey = process.env.GHOST_CONTENT_API_KEY;
 const apiUrl = process.env.GHOST_API_URL;
@@ -82,7 +83,7 @@ export default async function NotesPage() {
                         href={`/notes/${post.slug}`}
                         className="text-black dark:text-white hover:text-gray-500 dark:hover:text-gray-400 transition-colors block"
                       >
-                        {post.title}
+                        <ContentRenderer content={post.title.replace(/\$\$/g, '$')} />
                       </Link>
                     </li>
                   ))}
