@@ -52,6 +52,7 @@ export default async function TheoremsPage() {
 // Convert all LaTeX to inline format
 function convertToInline(content: string): string {
   return content
-    .replace(/\$\$(.*?)\$\$/g, `\\($1\\)`) // Convert block LaTeX to inline
-    .replace(/(?<!\\)\$(.*?)(?<!\\)\$/g, `\\($1\\)`); // Standardize inline LaTeX
+    .replace(/\$\$(.*?)\$\$/g, `\$($1\$)`) // Convert block LaTeX $$...$$ to inline $...$
+    .replace(/(?<!\\)\$(.*?)(?<!\\)\$/g, `\$($1\$)`); // Standardize inline LaTeX $...$ to $...$
+  
 }
