@@ -1,0 +1,179 @@
+[
+  {
+    "sectionName": "Undergraduate Certificate in Pure Mathematics (IU)",
+    "code": "MATH-M 393",
+    "title": "Bridge to Abstract Mathematics",
+    "description": "Introduction to proof techniques, logic, set theory, functions, relations, and mathematical structures. Prepares students for abstract mathematics.",
+    "image": "/assets/abstract-mathematics-bridge.png",
+    "credits": 3,
+    "syllabusLink": "/downloads/MATH-M-393-syllabus.pdf",
+    "latexLink": "/downloads/MATH-M-393-latex.zip",
+    "fullNotesLink": "/downloads/MATH-M-393-full-notes.pdf"
+  },
+  {
+    "sectionName": "Undergraduate Certificate in Pure Mathematics (IU)",
+    "code": "MATH-M 404",
+    "title": "Modern Algebra II",
+    "description": "This course builds upon the concepts learned in Modern Algebra I, focusing on advanced topics in group theory, ring theory, and field theory. Students will explore topics such as Galois theory, modules, and advanced structural theorems.",
+    "image": "/assets/modern-algebra2.png",
+    "credits": 3,
+    "syllabusLink": "/downloads/MATH-M-404-syllabus.pdf",
+    "latexLink": "/downloads/MATH-M-404-latex.zip",
+    "fullNotesLink": "/downloads/MATH-M-404-full-notes.pdf"
+  },
+  {
+    "sectionName": "Undergraduate Certificate in Pure Mathematics (IU)",
+    "code": "MATH-M 414",
+    "title": "Real Analysis II",
+    "description": "This course continues the study of real analysis, focusing on the theory of sequences and series, functions of several variables, and integration. Topics include the rigorous development of concepts such as limits, continuity, and differentiability.",
+    "image": "/assets/analysis-2.jpg",
+    "credits": 3,
+    "syllabusLink": "/downloads/MATH-M-414-syllabus.pdf",
+    "latexLink": "/downloads/MATH-M-414-latex.zip",
+    "fullNotesLink": "/downloads/MATH-M-414-full-notes.pdf"
+  },
+  {
+    "sectionName": "Undergraduate Certificate in Pure Mathematics (IU)",
+    "code": "MATH-M 405",
+    "title": "Number Theory",
+    "description": "Prime numbers, divisibility, congruences, Diophantine equations, modular arithmetic, and applications of number theory.",
+    "image": "/assets/numbertheory.jpg",
+    "credits": 3,
+    "syllabusLink": "/downloads/MATH-M-405-syllabus.pdf",
+    "latexLink": "/downloads/MATH-M-405-latex.zip",
+    "fullNotesLink": "/downloads/MATH-M-405-full-notes.pdf"
+  },
+  {
+    "sectionName": "Mathematics, BS Degree",
+    "code": "MATH-P 102",
+    "title": "Pre-Calculus",
+    "description": "Study of functions, polynomial and rational expressions, exponential and logarithmic functions, trigonometry, and their applications.",
+    "image": "/assets/precalc.png",
+    "credits": 3,
+    "syllabusLink": "/downloads/MATH-P-102-syllabus.pdf",
+    "latexLink": "/downloads/MATH-P-102-latex.zip",
+    "fullNotesLink": "/downloads/MATH-P-102-full-notes.pdf"
+  },
+  {
+    "sectionName": "Mathematics, BS Degree",
+    "code": "MATH-M 215",
+    "title": "Calculus I",
+    "description": "Limits, continuity, differentiation, applications of derivatives, optimization, and the fundamental theorem of calculus.",
+    "image": "/assets/single-variable-calculus.png",
+    "credits": 5,
+    "syllabusLink": "/downloads/MATH-M-215-syllabus.pdf",
+    "latexLink": "/downloads/MATH-M-215-latex.zip",
+    "fullNotesLink": "/downloads/MATH-M-215-full-notes.pdf"
+  },
+  {
+    "sectionName": "Mathematics, BS Degree",
+    "code": "MATH-M 216",
+    "title": "Calculus II",
+    "description": "Integration techniques, series, convergence tests, Taylor expansions, and applications to physics and engineering.",
+    "image": "/assets/calculus-II.png",
+    "credits": 5,
+    "syllabusLink": "/downloads/MATH-M-216-syllabus.pdf",
+    "latexLink": "/downloads/MATH-M-216-latex.zip",
+    "fullNotesLink": "/downloads/MATH-M-216-full-notes.pdf"
+  },
+  {
+    "sectionName": "Mathematics, BS Degree",
+    "code": "MATH-M 303",
+    "title": "Linear Algebra",
+    "description": "Vectors, matrices, determinants, eigenvalues, eigenvectors, vector spaces, linear transformations, and diagonalization.",
+    "image": "/assets/linear-algebra.jpg",
+    "credits": 3,
+    "syllabusLink": "/downloads/MATH-M-303-syllabus.pdf",
+    "latexLink": "/downloads/MATH-M-303-latex.zip",
+    "fullNotesLink": "/downloads/MATH-M-303-full-notes.pdf"
+  },
+  {
+    "sectionName": "Mathematics, BS Degree",
+    "code": "MATH-M 311",
+    "title": "Calculus III",
+    "description": "Multivariable calculus: partial derivatives, multiple integrals, vector calculus, and applications in physics.",
+    "image": "/assets/multivariable-calculus.png",
+    "credits": 3,
+    "syllabusLink": "/downloads/MATH-M-311-syllabus.pdf",
+    "latexLink": "/downloads/MATH-M-311-latex.zip",
+    "fullNotesLink": "/downloads/MATH-M-311-full-notes.pdf"
+  },
+  {
+    "sectionName": "Mathematics, BS Degree",
+    "code": "MATH-M 312",
+    "title": "Calculus IV",
+    "description": "Advanced integration techniques, surface integrals, and applications in differential geometry and fluid dynamics.",
+    "image": "/assets/differential-equations.jpg",
+    "credits": 3,
+    "syllabusLink": "/downloads/MATH-M-312-syllabus.pdf",
+    "latexLink": "/downloads/MATH-M-312-latex.zip",
+    "fullNotesLink": "/downloads/MATH-M-312-full-notes.pdf"
+  },
+  {
+    "sectionName": "Mathematics, BS Degree",
+    "code": "MATH-M 421",
+    "title": "Introduction to Topology I",
+    "description": "Introduction to topological spaces, open sets, closed sets, continuity, homeomorphisms, and compactness.",
+    "image": "/assets/main-topology.jpg",
+    "credits": 3,
+    "syllabusLink": "/downloads/MATH-M-421-syllabus.pdf",
+    "latexLink": "/downloads/MATH-M-421-latex.zip",
+    "fullNotesLink": "/downloads/MATH-M-421-full-notes.pdf"
+  },
+  {
+    "sectionName": "Mathematics, BS Degree",
+    "code": "MATH-T 336",
+    "title": "Topics in Euclidean Geometry",
+    "description": "Classical topics in Euclidean geometry, including axioms, constructions, and geometric proofs.",
+    "image": "/assets/euclidean-geometry.png",
+    "credits": 3,
+    "syllabusLink": "/downloads/MATH-T-336-syllabus.pdf",
+    "latexLink": "/downloads/MATH-T-336-latex.zip",
+    "fullNotesLink": "/downloads/MATH-T-336-full-notes.pdf"
+  },
+  {
+    "sectionName": "Mathematics, BS Degree",
+    "code": "MATH-M 413",
+    "title": "Real Analysis I",
+    "description": "Real numbers, sequences, limits, continuity, differentiation, integration, and series in one variable.",
+    "image": "/assets/analysis-1.jpg",
+    "credits": 3,
+    "syllabusLink": "/downloads/MATH-M-413-syllabus.pdf",
+    "latexLink": "/downloads/MATH-M-413-latex.zip",
+    "fullNotesLink": "/downloads/MATH-M-413-full-notes.pdf"
+  },
+  {
+    "sectionName": "Mathematics, BS Degree",
+    "code": "MATH-M 403",
+    "title": "Modern Algebra I",
+    "description": "Introduction to groups, rings, fields, and vector spaces. Topics include group theory, ring theory, and elementary field theory.",
+    "image": "/assets/modern-algebra.png",
+    "credits": 3,
+    "syllabusLink": "/downloads/MATH-M-403-syllabus.pdf",
+    "latexLink": "/downloads/MATH-M-403-latex.zip",
+    "fullNotesLink": "/downloads/MATH-M-403-full-notes.pdf"
+  },
+  {
+    "sectionName": "Mathematics, BS Degree",
+    "code": "MATH-M 447",
+    "title": "Mathematical Models",
+    "description": "This course introduces mathematical modeling techniques in a variety of real-world contexts. Topics include dynamic systems, differential equations, optimization, and computational methods for solving models.",
+    "image": "/assets/mathmodels.jpg",
+    "credits": 3,
+    "syllabusLink": "/downloads/MATH-M-447-syllabus.pdf",
+    "latexLink": "/downloads/MATH-M-447-latex.zip",
+    "fullNotesLink": "/downloads/MATH-M-447-full-notes.pdf"
+  },
+  {
+    "sectionName": "Mathematics, Undergrad (MIT)",
+    "code": "18.01",
+    "title": "Single Variable Calculus",
+    "description": "Differentiation and integration of functions of one variable, with applications.",
+    "image": "/assets/mit-calc1.png",
+    "credits": 12,
+    "syllabusLink": "/downloads/18.01-syllabus.pdf",
+    "latexLink": "/downloads/18.01-latex.zip",
+    "fullNotesLink": "/downloads/18.01-full-notes.pdf"
+  }
+]
+

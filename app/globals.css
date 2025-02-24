@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+body {
+  font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
+}
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    /* other variables... */
+  }
+
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+    /* other dark mode variables... */
+  }
+}
+
+@layer base {
+  .slug-page * {
+    @apply border-border;
+  }
+  .slug-page body {
+    @apply bg-background text-foreground;
+  }
+
+  .slug-page h1, .slug-page h2, .slug-page h3, .slug-page h4, .slug-page h5, .slug-page h6 {
+    @apply font-bold text-foreground;
+  }
+
+  .slug-page h1 {
+    @apply text-4xl mb-4 mt-8;
+  }
+
+  .slug-page h2 {
+    @apply text-3xl mb-4 mt-6;
+  }
+
+  .slug-page h3 {
+    @apply text-2xl mb-3 mt-5;
+  }
+
+  .slug-page h4 {
+    @apply text-xl mb-2 mt-4;
+  }
+
+  .slug-page p {
+    @apply mb-4 leading-7;
+  }
+
+  .slug-page ul, .slug-page ol {
+    @apply list-disc list-inside mb-4 pl-6;
+  }
+
+  .slug-page ol {
+    list-style-type: decimal;
+  }
+
+  .slug-page li {
+    @apply mb-1;
+  }
+
+  .slug-page blockquote {
+    @apply border-l-4 pl-4 italic text-muted-foreground mb-4;
+    border-color: var(--muted-foreground);
+  }
+
+  .slug-page pre {
+    @apply bg-muted text-foreground rounded p-4 overflow-auto;
+  }
+
+  .slug-page code {
+    @apply bg-muted text-foreground px-1 rounded;
+  }
+
+  .slug-page a {
+    @apply text-primary hover:no-underline;
+  }
+
+  .slug-page img {
+    @apply max-w-full rounded;
+  }
+
+  .slug-page table {
+    @apply w-full border-collapse border border-muted-foreground;
+  }
+
+  .slug-page th, .slug-page td {
+    @apply border border-muted-foreground px-4 py-2;
+  }
+
+  .slug-page th {
+    @apply bg-muted text-foreground font-bold;
+  }
+}
+
+@layer base {
+  .notes-page * {
+    @apply border-border;
+  }
+  .notes-page body {
+    @apply bg-background text-foreground;
+  }
+
+  .notes-page h1, .notes-page h2, .notes-page h3, .notes-page h4, .notes-page h5, .notes-page h6 {
+    @apply font-bold text-foreground;
+  }
+
+  .notes-page h1 {
+    @apply text-4xl mb-4 mt-8;
+  }
+
+  .notes-page h2 {
+    @apply text-3xl mb-4 mt-6;
+  }
+
+  .notes-page h3 {
+    @apply text-2xl mb-3 mt-5;
+  }
+
+  .notes-page h4 {
+    @apply text-xl mb-2 mt-4;
+  }
+
+  .notes-page p {
+    @apply mb-4 leading-7;
+  }
+
+  .notes-page ul, .notes-page ol {
+    @apply list-disc list-inside mb-4 pl-6;
+  }
+
+  .notes-page ol {
+    list-style-type: decimal;
+  }
+
+  .notes-page li {
+    @apply mb-1;
+  }
+
+  .notes-page blockquote {
+    @apply border-l-4 pl-4 italic text-muted-foreground mb-4;
+    border-color: var(--muted-foreground);
+  }
+
+  .notes-page pre {
+    @apply bg-muted text-foreground rounded p-4 overflow-auto;
+  }
+
+  .notes-page code {
+    @apply bg-muted text-foreground px-1 rounded;
+  }
+
+  .notes-page a {
+    @apply text-primary hover:no-underline;
+  }
+
+  .notes-page img {
+    @apply max-w-full rounded;
+  }
+
+  .notes-page table {
+    @apply w-full border-collapse border border-muted-foreground;
+  }
+
+  .notes-page th, .notes-page td {
+    @apply border border-muted-foreground px-4 py-2;
+  }
+
+  .notes-page th {
+    @apply bg-muted text-foreground font-bold;
+  }
+}
