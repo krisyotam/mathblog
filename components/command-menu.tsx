@@ -16,6 +16,8 @@ import {
   Sun,
   Moon,
   Sigma,
+  GraduationCap,
+  School,
 } from "lucide-react"
 import { useTheme } from "./theme-provider"
 
@@ -44,6 +46,8 @@ export function CommandMenu() {
       { icon: Sigma, label: "Theorems", action: () => router.push("/theorems") },
       { icon: Book, label: "Workbooks", action: () => router.push("/workbooks") },
       { icon: FileText, label: "Lecture Notes", action: () => router.push("/lecture-notes") },
+      { icon: GraduationCap, label: "Courses", action: () => router.push("/courses") },
+      { icon: School, label: "Research", action: () => router.push("/research") },
     ],
     Info: [
       { icon: Mic, label: "Talks", action: () => router.push("/talks") },

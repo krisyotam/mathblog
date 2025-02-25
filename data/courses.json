@@ -1,0 +1,76 @@
+[
+    {
+      "title": "Precalculus /w Limits",
+      "subtitle": "Groups, Rings, and Fields",
+      "description": "A comprehensive introduction to abstract algebra, covering group theory, ring theory, and field theory. This course develops the fundamental concepts and theorems that form the foundation of modern algebra.",
+      "date": "2023-09-01",
+      "author": "Kris Yotam",
+      "img": "/courses/precalculus.jpg",
+      "latexLink": "/courses/abstract-algebra.tex",
+      "pdfLink": "/courses/abstract-algebra.pdf",
+      "category": "Precalculus",
+      "tags": ["Group Theory", "Ring Theory", "Field Theory", "Abstract Algebra"]
+    },
+    {
+      "title": "Single Variable Calculus",
+      "subtitle": "Curves, Surfaces, and Manifolds",
+      "description": "An exploration of differential geometry, from curves and surfaces to manifolds. Includes detailed discussions of curvature, geodesics, and the fundamental forms of surfaces.",
+      "date": "2023-10-15",
+      "author": "Kris Yotam",
+      "img": "/courses/calcI.jpg",
+      "latexLink": "/courses/differential-geometry.tex",
+      "pdfLink": "/courses/differential-geometry.pdf",
+      "category": "Calculus",
+      "tags": ["Differential Geometry", "Manifolds", "Curvature", "Geodesics"]
+    },
+    {
+      "title": "Integral Calculus",
+      "subtitle": "Theory of Functions of a Complex Variable",
+      "description": "A rigorous treatment of complex analysis, covering analytic functions, complex integration, Cauchy's theorem, and applications to various areas of mathematics.",
+      "date": "2023-11-01",
+      "author": "Kris Yotam",
+      "img": "/courses/calcII.jpg",
+      "latexLink": "/courses/complex-analysis.tex",
+      "pdfLink": "/courses/complex-analysis.pdf",
+      "category": "Calculus",
+      "tags": ["Complex Analysis", "Analytic Functions", "Complex Integration"]
+    },
+    {
+      "title": "Multivariate Calculus",
+      "subtitle": "Point-Set and Algebraic Topology",
+      "description": "An introduction to topological spaces, continuity, connectedness, compactness, and fundamental groups. Bridges the gap between abstract algebra and analysis.",
+      "date": "2024-01-15",
+      "author": "Kris Yotam",
+      "img": "/courses/multivariable.jpg",
+      "latexLink": "/courses/topology.tex",
+      "pdfLink": "/courses/topology.pdf",
+      "category": "Calculus",
+      "tags": ["Point-Set Topology", "Algebraic Topology", "Fundamental Groups"]
+    },
+    {
+      "title": "Mathematical Logic",
+      "subtitle": "Foundations of Modern Analysis",
+      "description": "A detailed study of measure theory, including Lebesgue measure, integration theory, and their applications to probability theory and functional analysis.",
+      "date": "2024-02-01",
+      "author": "Kris Yotam",
+      "img": "/courses/measure-theory.jpg",
+      "latexLink": "/courses/measure-theory.tex",
+      "pdfLink": "/courses/measure-theory.pdf",
+      "category": "Analysis",
+      "tags": ["Measure Theory", "Lebesgue Integration", "Real Analysis"]
+    },
+    {
+      "title": "Mathematical Intuition",
+      "subtitle": "The Language of Mathematics",
+      "description": "An introduction to category theory, covering functors, natural transformations, limits, and adjunctions. Emphasizes the unifying role of categorical concepts in mathematics.",
+      "date": "2024-02-15",
+      "author": "Kris Yotam",
+      "img": "/courses/category-theory.jpg",
+      "latexLink": "/courses/category-theory.tex",
+      "pdfLink": "/courses/category-theory.pdf",
+      "category": "Foundations",
+      "tags": ["Category Theory", "Functors", "Natural Transformations"]
+    }
+  ]
+  
+  

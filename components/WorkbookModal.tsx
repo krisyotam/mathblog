@@ -17,10 +17,14 @@ interface WorkbookModalProps {
     latex_link: string
     pdf_link: string
   } | null
+  status: "active" | "que" | "dropped" | "finished" // Added status prop
 }
 
-export function WorkbookModal({ isOpen, onClose, workbook }: WorkbookModalProps) {
+export function WorkbookModal({ isOpen, onClose, workbook, status }: WorkbookModalProps) {
   if (!workbook) return null
+
+  // Conditionally render the download buttons if status is "finished" or "dropped"
+  const shouldShowDownloadButtons = status === "finished" || status === "dropped";
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -43,16 +47,20 @@ export function WorkbookModal({ isOpen, onClose, workbook }: WorkbookModalProps)
             </div>
           </div>
           <p className="text-sm text-muted-foreground">{workbook.description}</p>
-          <div className="flex gap-4">
-            <Button onClick={() => window.open(workbook.latex_link, "_blank")} className="flex-1">
-              <Download className="mr-2 h-4 w-4" />
-              LaTeX Files
-            </Button>
-            <Button onClick={() => window.open(workbook.pdf_link, "_blank")} className="flex-1">
-              <Download className="mr-2 h-4 w-4" />
-              PDF Version
-            </Button>
-          </div>
+
+          {/* Conditionally render download buttons */}
+          {shouldShowDownloadButtons && (
+            <div className="flex gap-4">
+              <Button onClick={() => window.open(workbook.latex_link, "_blank")} className="flex-1">
+                <Download className="mr-2 h-4 w-4" />
+                LaTeX Files
+              </Button>
+              <Button onClick={() => window.open(workbook.pdf_link, "_blank")} className="flex-1">
+                <Download className="mr-2 h-4 w-4" />
+                PDF Version
+              </Button>
+            </div>
+          )}
         </div>
       </DialogContent>
     </Dialog>

@@ -1,6 +1,6 @@
 [
   {
-    "sectionName": "Undergraduate Certificate in Pure Mathematics (IU)",
+    "id": "MATH-M-393",
     "code": "MATH-M 393",
     "title": "Bridge to Abstract Mathematics",
     "description": "Introduction to proof techniques, logic, set theory, functions, relations, and mathematical structures. Prepares students for abstract mathematics.",
@@ -8,10 +8,12 @@
     "credits": 3,
     "syllabusLink": "/downloads/MATH-M-393-syllabus.pdf",
     "latexLink": "/downloads/MATH-M-393-latex.zip",
-    "fullNotesLink": "/downloads/MATH-M-393-full-notes.pdf"
+    "fullNotesLink": "/downloads/MATH-M-393-full-notes.pdf",
+    "category": "Pure Mathematics",
+    "tags": ["Logic", "Set Theory", "Proof Techniques", "Foundations"]
   },
   {
-    "sectionName": "Undergraduate Certificate in Pure Mathematics (IU)",
+    "id": "MATH-M-404",
     "code": "MATH-M 404",
     "title": "Modern Algebra II",
     "description": "This course builds upon the concepts learned in Modern Algebra I, focusing on advanced topics in group theory, ring theory, and field theory. Students will explore topics such as Galois theory, modules, and advanced structural theorems.",
@@ -19,10 +21,12 @@
     "credits": 3,
     "syllabusLink": "/downloads/MATH-M-404-syllabus.pdf",
     "latexLink": "/downloads/MATH-M-404-latex.zip",
-    "fullNotesLink": "/downloads/MATH-M-404-full-notes.pdf"
+    "fullNotesLink": "/downloads/MATH-M-404-full-notes.pdf",
+    "category": "Pure Mathematics",
+    "tags": ["Algebra", "Group Theory", "Ring Theory", "Field Theory", "Galois Theory"]
   },
   {
-    "sectionName": "Undergraduate Certificate in Pure Mathematics (IU)",
+    "id": "MATH-M-414",
     "code": "MATH-M 414",
     "title": "Real Analysis II",
     "description": "This course continues the study of real analysis, focusing on the theory of sequences and series, functions of several variables, and integration. Topics include the rigorous development of concepts such as limits, continuity, and differentiability.",
@@ -30,10 +34,12 @@
     "credits": 3,
     "syllabusLink": "/downloads/MATH-M-414-syllabus.pdf",
     "latexLink": "/downloads/MATH-M-414-latex.zip",
-    "fullNotesLink": "/downloads/MATH-M-414-full-notes.pdf"
+    "fullNotesLink": "/downloads/MATH-M-414-full-notes.pdf",
+    "category": "Pure Mathematics",
+    "tags": ["Analysis", "Integration Theory", "Sequences", "Series", "Multivariable Calculus"]
   },
   {
-    "sectionName": "Undergraduate Certificate in Pure Mathematics (IU)",
+    "id": "MATH-M-405",
     "code": "MATH-M 405",
     "title": "Number Theory",
     "description": "Prime numbers, divisibility, congruences, Diophantine equations, modular arithmetic, and applications of number theory.",
@@ -41,10 +47,12 @@
     "credits": 3,
     "syllabusLink": "/downloads/MATH-M-405-syllabus.pdf",
     "latexLink": "/downloads/MATH-M-405-latex.zip",
-    "fullNotesLink": "/downloads/MATH-M-405-full-notes.pdf"
+    "fullNotesLink": "/downloads/MATH-M-405-full-notes.pdf",
+    "category": "Pure Mathematics",
+    "tags": ["Number Theory", "Prime Numbers", "Congruences", "Diophantine Equations"]
   },
   {
-    "sectionName": "Mathematics, BS Degree",
+    "id": "MATH-P-102",
     "code": "MATH-P 102",
     "title": "Pre-Calculus",
     "description": "Study of functions, polynomial and rational expressions, exponential and logarithmic functions, trigonometry, and their applications.",
@@ -52,10 +60,12 @@
     "credits": 3,
     "syllabusLink": "/downloads/MATH-P-102-syllabus.pdf",
     "latexLink": "/downloads/MATH-P-102-latex.zip",
-    "fullNotesLink": "/downloads/MATH-P-102-full-notes.pdf"
+    "fullNotesLink": "/downloads/MATH-P-102-full-notes.pdf",
+    "category": "Foundational Mathematics",
+    "tags": ["Pre-Calculus", "Functions", "Trigonometry", "Algebra"]
   },
   {
-    "sectionName": "Mathematics, BS Degree",
+    "id": "MATH-M-215",
     "code": "MATH-M 215",
     "title": "Calculus I",
     "description": "Limits, continuity, differentiation, applications of derivatives, optimization, and the fundamental theorem of calculus.",
@@ -63,10 +73,12 @@
     "credits": 5,
     "syllabusLink": "/downloads/MATH-M-215-syllabus.pdf",
     "latexLink": "/downloads/MATH-M-215-latex.zip",
-    "fullNotesLink": "/downloads/MATH-M-215-full-notes.pdf"
+    "fullNotesLink": "/downloads/MATH-M-215-full-notes.pdf",
+    "category": "Calculus",
+    "tags": ["Single Variable Calculus", "Limits", "Derivatives", "Integration"]
   },
   {
-    "sectionName": "Mathematics, BS Degree",
+    "id": "MATH-M-216",
     "code": "MATH-M 216",
     "title": "Calculus II",
     "description": "Integration techniques, series, convergence tests, Taylor expansions, and applications to physics and engineering.",
@@ -74,10 +86,12 @@
     "credits": 5,
     "syllabusLink": "/downloads/MATH-M-216-syllabus.pdf",
     "latexLink": "/downloads/MATH-M-216-latex.zip",
-    "fullNotesLink": "/downloads/MATH-M-216-full-notes.pdf"
+    "fullNotesLink": "/downloads/MATH-M-216-full-notes.pdf",
+    "category": "Calculus",
+    "tags": ["Integration", "Series", "Taylor Series", "Applications"]
   },
   {
-    "sectionName": "Mathematics, BS Degree",
+    "id": "MATH-M-303",
     "code": "MATH-M 303",
     "title": "Linear Algebra",
     "description": "Vectors, matrices, determinants, eigenvalues, eigenvectors, vector spaces, linear transformations, and diagonalization.",
@@ -85,10 +99,12 @@
     "credits": 3,
     "syllabusLink": "/downloads/MATH-M-303-syllabus.pdf",
     "latexLink": "/downloads/MATH-M-303-latex.zip",
-    "fullNotesLink": "/downloads/MATH-M-303-full-notes.pdf"
+    "fullNotesLink": "/downloads/MATH-M-303-full-notes.pdf",
+    "category": "Pure Mathematics",
+    "tags": ["Linear Algebra", "Matrices", "Vector Spaces", "Linear Transformations"]
   },
   {
-    "sectionName": "Mathematics, BS Degree",
+    "id": "MATH-M-311",
     "code": "MATH-M 311",
     "title": "Calculus III",
     "description": "Multivariable calculus: partial derivatives, multiple integrals, vector calculus, and applications in physics.",
@@ -96,10 +112,12 @@
     "credits": 3,
     "syllabusLink": "/downloads/MATH-M-311-syllabus.pdf",
     "latexLink": "/downloads/MATH-M-311-latex.zip",
-    "fullNotesLink": "/downloads/MATH-M-311-full-notes.pdf"
+    "fullNotesLink": "/downloads/MATH-M-311-full-notes.pdf",
+    "category": "Calculus",
+    "tags": ["Multivariable Calculus", "Vector Calculus", "Partial Derivatives", "Multiple Integrals"]
   },
   {
-    "sectionName": "Mathematics, BS Degree",
+    "id": "MATH-M-312",
     "code": "MATH-M 312",
     "title": "Calculus IV",
     "description": "Advanced integration techniques, surface integrals, and applications in differential geometry and fluid dynamics.",
@@ -107,10 +125,12 @@
     "credits": 3,
     "syllabusLink": "/downloads/MATH-M-312-syllabus.pdf",
     "latexLink": "/downloads/MATH-M-312-latex.zip",
-    "fullNotesLink": "/downloads/MATH-M-312-full-notes.pdf"
+    "fullNotesLink": "/downloads/MATH-M-312-full-notes.pdf",
+    "category": "Calculus",
+    "tags": ["Advanced Calculus", "Surface Integrals", "Differential Geometry", "Fluid Dynamics"]
   },
   {
-    "sectionName": "Mathematics, BS Degree",
+    "id": "MATH-M-421",
     "code": "MATH-M 421",
     "title": "Introduction to Topology I",
     "description": "Introduction to topological spaces, open sets, closed sets, continuity, homeomorphisms, and compactness.",
@@ -118,10 +138,12 @@
     "credits": 3,
     "syllabusLink": "/downloads/MATH-M-421-syllabus.pdf",
     "latexLink": "/downloads/MATH-M-421-latex.zip",
-    "fullNotesLink": "/downloads/MATH-M-421-full-notes.pdf"
+    "fullNotesLink": "/downloads/MATH-M-421-full-notes.pdf",
+    "category": "Pure Mathematics",
+    "tags": ["Topology", "Topological Spaces", "Continuity", "Compactness"]
   },
   {
-    "sectionName": "Mathematics, BS Degree",
+    "id": "MATH-T-336",
     "code": "MATH-T 336",
     "title": "Topics in Euclidean Geometry",
     "description": "Classical topics in Euclidean geometry, including axioms, constructions, and geometric proofs.",
@@ -129,10 +151,12 @@
     "credits": 3,
     "syllabusLink": "/downloads/MATH-T-336-syllabus.pdf",
     "latexLink": "/downloads/MATH-T-336-latex.zip",
-    "fullNotesLink": "/downloads/MATH-T-336-full-notes.pdf"
+    "fullNotesLink": "/downloads/MATH-T-336-full-notes.pdf",
+    "category": "Geometry",
+    "tags": ["Euclidean Geometry", "Axioms", "Constructions", "Proofs"]
   },
   {
-    "sectionName": "Mathematics, BS Degree",
+    "id": "MATH-M-413",
     "code": "MATH-M 413",
     "title": "Real Analysis I",
     "description": "Real numbers, sequences, limits, continuity, differentiation, integration, and series in one variable.",
@@ -140,10 +164,12 @@
     "credits": 3,
     "syllabusLink": "/downloads/MATH-M-413-syllabus.pdf",
     "latexLink": "/downloads/MATH-M-413-latex.zip",
-    "fullNotesLink": "/downloads/MATH-M-413-full-notes.pdf"
+    "fullNotesLink": "/downloads/MATH-M-413-full-notes.pdf",
+    "category": "Pure Mathematics",
+    "tags": ["Analysis", "Real Numbers", "Sequences", "Continuity"]
   },
   {
-    "sectionName": "Mathematics, BS Degree",
+    "id": "MATH-M-403",
     "code": "MATH-M 403",
     "title": "Modern Algebra I",
     "description": "Introduction to groups, rings, fields, and vector spaces. Topics include group theory, ring theory, and elementary field theory.",
@@ -151,10 +177,12 @@
     "credits": 3,
     "syllabusLink": "/downloads/MATH-M-403-syllabus.pdf",
     "latexLink": "/downloads/MATH-M-403-latex.zip",
-    "fullNotesLink": "/downloads/MATH-M-403-full-notes.pdf"
+    "fullNotesLink": "/downloads/MATH-M-403-full-notes.pdf",
+    "category": "Pure Mathematics",
+    "tags": ["Algebra", "Group Theory", "Ring Theory", "Field Theory"]
   },
   {
-    "sectionName": "Mathematics, BS Degree",
+    "id": "MATH-M-447",
     "code": "MATH-M 447",
     "title": "Mathematical Models",
     "description": "This course introduces mathematical modeling techniques in a variety of real-world contexts. Topics include dynamic systems, differential equations, optimization, and computational methods for solving models.",
@@ -162,18 +190,23 @@
     "credits": 3,
     "syllabusLink": "/downloads/MATH-M-447-syllabus.pdf",
     "latexLink": "/downloads/MATH-M-447-latex.zip",
-    "fullNotesLink": "/downloads/MATH-M-447-full-notes.pdf"
+    "fullNotesLink": "/downloads/MATH-M-447-full-notes.pdf",
+    "category": "Applied Mathematics",
+    "tags": ["Mathematical Modeling", "Differential Equations", "Optimization", "Dynamic Systems"]
   },
   {
-    "sectionName": "Mathematics, Undergrad (MIT)",
+    "id": "18-01",
     "code": "18.01",
     "title": "Single Variable Calculus",
     "description": "Differentiation and integration of functions of one variable, with applications.",
-    "image": "/assets/mit-calc1.png",
+    "image": "/assets/single-variable-calculus.png",
     "credits": 12,
     "syllabusLink": "/downloads/18.01-syllabus.pdf",
     "latexLink": "/downloads/18.01-latex.zip",
-    "fullNotesLink": "/downloads/18.01-full-notes.pdf"
+    "fullNotesLink": "/downloads/18.01-full-notes.pdf",
+    "category": "Calculus",
+    "tags": ["Single Variable Calculus", "Differentiation", "Integration", "Applications"]
   }
 ]
+
 

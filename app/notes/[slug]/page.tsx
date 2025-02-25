@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ContentRenderer } from '@/components/ContentRenderer';
 import { CommandMenu } from '@/components/command-menu';
+import { TableOfContents } from "@/components/TableOfContents"
 
 const apiKey = process.env.GHOST_CONTENT_API_KEY;
 const apiUrl = process.env.GHOST_API_URL;
@@ -54,6 +55,7 @@ export default async function NotePage({ params }: { params: { slug: string } })
       .map((tag: { name: string }) => tag.name)
       .join(', ');
 
+        
     return (
       <main className="min-h-screen px-4 py-8 bg-background text-foreground notes-page">
         <nav className="max-w-2xl mx-auto mb-16">

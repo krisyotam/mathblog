@@ -1,0 +1,33 @@
+{
+    "theorems": [
+      {
+        "number": "1.3.7",
+        "title": "Monotone Sequence Convergence",
+        "statement": "$\\text{If } \\{a_n\\} \\text{ is monotone increasing and bounded above, then } \\{a_n\\} \\text{ converges}$",
+        "description": "A fundamental result in analysis that provides a simple criterion for sequence convergence. This theorem forms the basis for many convergence proofs.",
+        "leanProof": "/proofs/monotone-convergence.lean",
+        "latexProof": "/proofs/monotone-convergence.tex",
+        "status": "finished",
+        "category": "Sequences and Series",
+        "tags": ["convergence", "monotone sequences", "bounds", "fundamental theorems"],
+        "dateStarted": "2024-01-15",
+        "dateCompleted": "2024-02-01",
+        "reference": "Rudin, Principles of Mathematical Analysis, p. 55",
+        "notesSlug": "theorem-1-3-7-monotone-sequence-convergence"
+      },
+      {
+        "number": "2.4.1",
+        "title": "Uniform Continuity on Compact Sets",
+        "statement": "$\\text{If } f:[a,b] \\to \\mathbb{R} \\text{ is continuous on } [a,b]\\text{, then } f \\text{ is uniformly continuous on } [a,b]$",
+        "description": "Shows that continuity on a closed and bounded interval implies a stronger form of continuity. Essential for understanding function behavior on compact sets.",
+        "status": "active",
+        "category": "Continuity",
+        "tags": ["uniform continuity", "compactness", "metric spaces", "function properties"],
+        "dateStarted": "2024-02-10",
+        "reference": "Spivak, Calculus, Ch. 7",
+        "notesSlug": "theorem-2-4-1-uniform-continuity-compact-sets"
+      }
+    ]
+  }
+  
+  

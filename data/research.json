@@ -1,0 +1,73 @@
+[
+    {
+      "id": "RESEARCH_001",
+      "title": "On the Convergence of Non-Linear Optimization in Deep Neural Networks",
+      "abstract": "This paper investigates the convergence properties of non-linear optimization methods in deep neural networks, with a particular focus on the relationship between network architecture and optimization landscape. We present novel theoretical bounds on convergence rates and empirically validate our findings on large-scale networks.",
+      "importance": "This work provides fundamental insights into why deep learning optimization works in practice, offering theoretical guarantees that have been previously missing in the literature. The results have immediate practical applications in network design and training methodology.",
+      "authors": ["Kris Yotam", "Alice Chen", "Bob Smith"],
+      "subject": "Deep Learning Theory",
+      "keywords": ["Deep Learning", "Optimization Theory", "Neural Networks", "Convergence Analysis"],
+      "postedBy": "Kris Yotam",
+      "postedOn": "2024-01-15",
+      "dateStarted": "2022-02-15",
+      "status": "published",
+      "bibliography": [
+        "Bengio, Y. et al. (2015). Deep Learning. Nature, 521, 436-444.",
+        "LeCun, Y. et al. (2015). Deep learning. Nature, 521(7553), 436-444.",
+        "Smith, J. et al. (2023). Convergence in Deep Neural Networks. arXiv:2301.00001"
+      ],
+      "img": "/research/optimization.jpg",
+      "pdfLink": "/research/optimization.pdf",
+      "sourceLink": "https://github.com/krisyotam/deep-convergence",
+      "category": "Algebraic Topology",
+      "tags": ["Deep Learning", "Optimization", "Neural Networks", "Mathematics"]
+    },
+    {
+      "id": "RESEARCH_002",
+      "title": "A discrete iteration related to Pierce expansions",
+      "abstract": "We present a novel approach to analyzing quantum field theories using methods from topological data analysis. Our framework provides new insights into the structure of quantum fields by leveraging persistent homology and other topological invariants.",
+      "importance": "This research bridges the gap between topology and quantum field theory, providing new tools for understanding quantum phenomena. The methods developed here have potential applications in quantum computing and high-energy physics.",
+      "authors": ["Shallit", "Jeffrey O."],
+      "subject": "Number Theory",
+      "keywords": ["Pierce Expansions", "Quantum Field Theory", "Data Analysis", "Persistent Homology"],
+      "postedBy": "Shallit",
+      "postedOn": "2008-06-11",
+      "dateStarted": "2025-06-20",
+      "status": "active",
+      "bibliography": [
+        "Atiyah, M. (1988). Topological Quantum Field Theories. Publications Mathématiques de l'IHÉS, 68, 175-186.",
+        "Carlsson, G. (2009). Topology and Data. Bulletin of the American Mathematical Society, 46(2), 255-308.",
+        "Witten, E. (1989). Quantum Field Theory and the Jones Polynomial. Communications in Mathematical Physics, 121(3), 351-399."
+      ],
+      "img": "/research/a-discrete-iteration-related-to-pierce-expansions.png",
+      "pdfLink": "/research/topology-qft.pdf",
+      "sourceLink": "http://www.openproblemgarden.org/op/a_discrete_iteration_related_to_pierce_expansions",
+      "category": "Number Theory",
+      "tags": ["Topology", "Quantum Field Theory", "Data Analysis", "Physics"]
+    },
+    {
+      "id": "RESEARCH_003",
+      "title": "Category Theory Approaches to Database Design",
+      "abstract": "This paper explores the application of category theory to database design, demonstrating how categorical concepts naturally capture database relationships and constraints. We develop a new formal framework for database schema design and prove several optimality results.",
+      "importance": "This work provides a rigorous mathematical foundation for database design, leading to provably correct schema migrations and more reliable data management systems. The theoretical framework developed here has practical implications for modern database systems.",
+      "authors": ["Kris Yotam"],
+      "subject": "Applied Category Theory",
+      "keywords": ["Category Theory", "Database Theory", "Schema Design", "Applied Mathematics"],
+      "postedBy": "Kris Yotam",
+      "postedOn": "2023-11-01",
+      "dateStarted": "2024-02-01",
+      "status": "published",
+      "bibliography": [
+        "Spivak, D. I. (2012). Functorial Data Migration. Information and Computation, 217, 31-51.",
+        "Barr, M., Wells, C. (1990). Category Theory for Computing Science. Prentice Hall.",
+        "Date, C. J. (2012). Database Design and Relational Theory. O'Reilly Media."
+      ],
+      "img": "/research/category-theory.jpg",
+      "pdfLink": "/research/category-theory.pdf",
+      "sourceLink": "https://github.com/krisyotam/categorical-db",
+      "category": "Algebraic Geometry",
+      "tags": ["Category Theory", "Databases", "Mathematics", "Computer Science"]
+    }
+  ]
+  
+  

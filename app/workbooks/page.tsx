@@ -6,6 +6,7 @@ import Link from "next/link"
 import { CommandMenu } from "@/components/command-menu"
 import { WorkbookCard } from "@/components/WorkbookCard"
 import { WorkbookModal } from "@/components/WorkbookModal"
+import { Input } from "@/components/ui/input"
 
 interface Workbook {
   id: string
@@ -19,6 +20,7 @@ interface Workbook {
   latex_link: string
   pdf_link: string
   description: string
+  status: "active" | "que" | "dropped" | "finished"
 }
 
 const WorkbooksPage: React.FC = () => {
@@ -26,15 +28,14 @@ const WorkbooksPage: React.FC = () => {
   const [selectedWorkbook, setSelectedWorkbook] = useState<Workbook | null>(null)
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null)
   const [subjects, setSubjects] = useState<string[]>([])
+  const [searchQuery, setSearchQuery] = useState("")
 
   useEffect(() => {
     const fetchWorkbooks = async () => {
-      const response = await fetch('/api/workbooks')
-      const data: Workbook[] = await response.json() // Type the data as Workbook[]
+      const response = await fetch("/api/workbooks")
+      const data: Workbook[] = await response.json()
 
       setWorkbooks(data)
-
-      // Ensure subjects are a unique set of strings
       const uniqueSubjects: string[] = Array.from(new Set(data.map((w) => w.subject)))
       setSubjects(uniqueSubjects)
     }
@@ -42,7 +43,16 @@ const WorkbooksPage: React.FC = () => {
     fetchWorkbooks()
   }, [])
 
-  const filteredWorkbooks = selectedSubject ? workbooks.filter((w) => w.subject === selectedSubject) : workbooks
+  const filteredWorkbooks = workbooks.filter((workbook) => {
+    const matchesSearch =
+      workbook.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      workbook.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      workbook.author.toLowerCase().includes(searchQuery.toLowerCase())
+
+    const matchesSubject = !selectedSubject || workbook.subject === selectedSubject
+
+    return matchesSearch && matchesSubject
+  })
 
   return (
     <main className="min-h-screen px-4 py-8 bg-background text-foreground">
@@ -58,9 +68,25 @@ const WorkbooksPage: React.FC = () => {
 
       <div className="max-w-2xl mx-auto">
         <h1 className="text-2xl font-normal mb-8">Workbooks</h1>
+        <p className="text-sm text-muted-foreground mb-8">
+          These are my fully worked out solutions from various workbooks & textbooks I've done over the years. Each workbook is categorized with a
+          status to reflect its current state. If a workbook is marked as <strong>active</strong>, it means the work is currently in progress. <strong>Que</strong> indicates that
+          the workbook is queued to be started soon. If the status is <strong>dropped</strong>, it means the workbook is temporarily paused or abandoned. Finally, when a workbook
+          is <strong>finished</strong>, it is completed and available for download.
+        </p>
 
+        {/* Search Bar */}
         <div className="mb-8">
-          {/* Updated grid to display 4 columns */}
+          <Input
+            placeholder="Search workbooks..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full"
+          />
+        </div>
+
+        {/* Subject Filters */}
+        <div className="mb-8">
           <div className="grid grid-cols-4 gap-2">
             {subjects.map((subject) => (
               <button
@@ -76,6 +102,7 @@ const WorkbooksPage: React.FC = () => {
           </div>
         </div>
 
+        {/* Workbook Cards */}
         <div className="grid gap-4 md:grid-cols-2">
           {filteredWorkbooks.map((workbook) => (
             <WorkbookCard
@@ -84,20 +111,21 @@ const WorkbooksPage: React.FC = () => {
               name={workbook.name}
               subtitle={workbook.subtitle}
               author={workbook.author}
+              status={workbook.status}
               onClick={() => setSelectedWorkbook(workbook)}
             />
           ))}
         </div>
 
+        {/* Modal */}
         <WorkbookModal
           isOpen={!!selectedWorkbook}
           onClose={() => setSelectedWorkbook(null)}
-          workbook={selectedWorkbook}
-        />
+          workbook={selectedWorkbook} status={"active"}        />
       </div>
       <CommandMenu />
     </main>
   )
 }
 
-export default WorkbooksPage;
+export default WorkbooksPage

@@ -10,7 +10,8 @@
       "categories": ["Real Analysis", "Calculus"],
       "latex_link": "/downloads/number-theory-latex.zip",
       "pdf_link": "/downloads/number-theory.pdf",
-      "description": "A comprehensive collection of advanced number theory problems, covering topics from elementary number theory to algebraic number theory and analytic methods."
+      "description": "A comprehensive collection of advanced number theory problems, covering topics from elementary number theory to algebraic number theory and analytic methods.",
+      "status": "que"
     },
     {
       "id": "2",
@@ -23,7 +24,8 @@
       "categories": ["Differential Calculus", "Integral Calculus", "Multivariable Calculus"],
       "latex_link": "/downloads/abstract-algebra-latex.zip",
       "pdf_link": "/downloads/abstract-algebra.pdf",
-      "description": "An extensive workbook covering fundamental concepts in abstract algebra, with a focus on group theory, ring theory, and field theory."
+      "description": "An extensive workbook covering fundamental concepts in abstract algebra, with a focus on group theory, ring theory, and field theory.",
+      "status": "active"
     },
     {
       "id": "3",
@@ -36,7 +38,8 @@
       "categories": ["Arithmetic", "Algebra", "Trigonometry", "Geometry", "Complex Variables"],
       "latex_link": "/downloads/real-analysis-latex.zip",
       "pdf_link": "/downloads/real-analysis.pdf",
-      "description": "A comprehensive collection of exercises in real analysis, progressing from basic concepts to advanced topics in measure theory and functional analysis."
+      "description": "A comprehensive collection of exercises in real analysis, progressing from basic concepts to advanced topics in measure theory and functional analysis.",
+      "status": "active"
     },
     {
       "id": "4",
@@ -49,7 +52,8 @@
       "categories": ["Geometry", "Planimetry"],
       "latex_link": "/downloads/topology-latex.zip",
       "pdf_link": "/downloads/topology.pdf",
-      "description": "An introduction to topology through carefully selected problems, covering point-set topology, algebraic topology, and differential topology."
+      "description": "An introduction to topology through carefully selected problems, covering point-set topology, algebraic topology, and differential topology.",
+      "status": "que"
     },
     {
       "id": "5",
@@ -62,7 +66,8 @@
       "categories": ["Geometry", "Stereometry"],
       "latex_link": "/downloads/linear-algebra-latex.zip",
       "pdf_link": "/downloads/linear-algebra.pdf",
-      "description": "A comprehensive workbook on linear algebra, featuring problems on vector spaces, linear transformations, eigenvalues, and matrix theory."
+      "description": "A comprehensive workbook on linear algebra, featuring problems on vector spaces, linear transformations, eigenvalues, and matrix theory.",
+      "status": "que"
     },
     {
       "id": "6",
@@ -75,7 +80,8 @@
       "categories": ["Precalculus", "Trigonometry", "Algebra"],
       "latex_link": "/downloads/differential-geometry-latex.zip",
       "pdf_link": "/downloads/differential-geometry.pdf",
-      "description": "An advanced collection of problems in differential geometry, focusing on the theory of curves, surfaces, and manifolds."
+      "description": "An advanced collection of problems in differential geometry, focusing on the theory of curves, surfaces, and manifolds.",
+      "status": "que"
     },
     {
       "id": "7",
@@ -88,7 +94,8 @@
       "categories": ["Pure Mathematics", "Analysis"],
       "latex_link": "/downloads/complex-analysis-latex.zip",
       "pdf_link": "/downloads/complex-analysis.pdf",
-      "description": "A detailed workbook covering complex analysis, from basic complex functions to advanced topics in conformal mapping and Riemann surfaces."
+      "description": "A detailed workbook covering complex analysis, from basic complex functions to advanced topics in conformal mapping and Riemann surfaces.",
+      "status": "que"
     },
     {
       "id": "8",
@@ -101,7 +108,8 @@
       "categories": ["Real Analysis", "Complex Analysis"],
       "latex_link": "/downloads/category-theory-latex.zip",
       "pdf_link": "/downloads/category-theory.pdf",
-      "description": "An introduction to category theory through exercises, covering categories, functors, natural transformations, and their applications."
+      "description": "An introduction to category theory through exercises, covering categories, functors, natural transformations, and their applications.",
+      "status": "que"
     },
     {
       "id": "9",
@@ -114,7 +122,8 @@
       "categories": ["Functional Analysis"],
       "latex_link": "/downloads/algebraic-geometry-latex.zip",
       "pdf_link": "/downloads/algebraic-geometry.pdf",
-      "description": "A comprehensive collection of problems in algebraic geometry, from classical varieties to modern scheme theory."
+      "description": "A comprehensive collection of problems in algebraic geometry, from classical varieties to modern scheme theory.",
+      "status": "que"
     },
     {
       "id": "10",
@@ -127,20 +136,22 @@
       "categories": ["Pure Mathematics", "Logic"],
       "latex_link": "/downloads/logic-set-theory-latex.zip",
       "pdf_link": "/downloads/logic-set-theory.pdf",
-      "description": "An extensive workbook covering mathematical logic and set theory, including formal systems, model theory, and axiomatic set theory."
+      "description": "An extensive workbook covering mathematical logic and set theory, including formal systems, model theory, and axiomatic set theory.",
+      "status": "active"
     },
     {
-        "id": "11",
-        "cover": "/workbooks/logarithms-and-exponentials-chris-mcmullen.jpg",
-        "name": "Logarithims and Exponentials",
-        "subtitle": "",
-        "author": "Chris McMullen, Ph.D.",
-        "datePublished": "2023-08-15",
-        "subject": "Precalculus",
-        "categories": ["Pure Mathematics", "Logic"],
-        "latex_link": "/downloads/logic-set-theory-latex.zip",
-        "pdf_link": "/downloads/logic-set-theory.pdf",
-        "description": "An extensive workbook covering mathematical logic and set theory, including formal systems, model theory, and axiomatic set theory."
+      "id": "11",
+      "cover": "/workbooks/logarithms-and-exponentials-chris-mcmullen.jpg",
+      "name": "Logarithims and Exponentials",
+      "subtitle": "",
+      "author": "Chris McMullen, Ph.D.",
+      "datePublished": "2023-08-15",
+      "subject": "Precalculus",
+      "categories": ["Pure Mathematics", "Logic"],
+      "latex_link": "/downloads/logic-set-theory-latex.zip",
+      "pdf_link": "/downloads/logic-set-theory.pdf",
+      "description": "An extensive workbook covering mathematical logic and set theory, including formal systems, model theory, and axiomatic set theory.",
+      "status": "active"
     },
     {
       "id": "12",
@@ -153,7 +164,8 @@
       "categories": ["Combinatorics", "Discrete Mathematics"],
       "latex_link": "/downloads/logic-set-theory-latex.zip",
       "pdf_link": "/downloads/logic-set-theory.pdf",
-      "description": "An extensive workbook covering mathematical logic and set theory, including formal systems, model theory, and axiomatic set theory."
+      "description": "An extensive workbook covering mathematical logic and set theory, including formal systems, model theory, and axiomatic set theory.",
+      "status": "que"
   },
   {
     "id": "13",
@@ -166,7 +178,8 @@
     "categories": ["Abstract Algebra", "Group Theory", "Ring Theory", "Field Theory"],
     "latex_link": "/downloads/logic-set-theory-latex.zip",
     "pdf_link": "/downloads/logic-set-theory.pdf",
-    "description": "An extensive workbook covering mathematical logic and set theory, including formal systems, model theory, and axiomatic set theory."
+    "description": "An extensive workbook covering mathematical logic and set theory, including formal systems, model theory, and axiomatic set theory.",
+    "status": "que"
   },
   {
     "id": "14",
@@ -179,8 +192,8 @@
     "categories": ["Real Analysis", "Calculus"],
     "latex_link": "/downloads/logic-set-theory-latex.zip",
     "pdf_link": "/downloads/logic-set-theory.pdf",
-    "description": "An extensive workbook covering mathematical logic and set theory, including formal systems, model theory, and axiomatic set theory."
-
+    "description": "An extensive workbook covering mathematical logic and set theory, including formal systems, model theory, and axiomatic set theory.",
+    "status": "que"
   }
   ]
   

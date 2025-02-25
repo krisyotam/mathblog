@@ -1,54 +1,64 @@
+"use client"
+
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import { CommandMenu } from "@/components/command-menu"
 import type { GhostPost } from "@/utils/ghost"
-import * as Collapsible from "@radix-ui/react-collapsible"
-import { ChevronDown, ChevronRight } from "lucide-react"
 
-const apiKey = process.env.GHOST_CONTENT_API_KEY
-const apiUrl = process.env.GHOST_API_URL
+export default function NotesPage() {
+  const [posts, setPosts] = useState<GhostPost[]>([])
+  const [error, setError] = useState<string | null>(null)
+  const [categories, setCategories] = useState<{ [key: string]: GhostPost[] }>({})
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
+  const [isLoading, setIsLoading] = useState(true)
 
-export const revalidate = 3600 // Revalidate every hour
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        setIsLoading(true)
+        const response = await fetch("/api/notes")
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`)
+        }
+        const fetchedPosts = await response.json()
 
-async function getNotesPosts(): Promise<GhostPost[]> {
-  const url = new URL("/ghost/api/v3/content/posts/", apiUrl)
-  url.searchParams.append("key", apiKey || "")
-  url.searchParams.append("filter", "tag:krismathblog-notes")
-  url.searchParams.append("limit", "all")
-  url.searchParams.append("include", "tags")
+        // Group posts by category (third tag)
+        const groupedPosts: { [key: string]: GhostPost[] } = {}
+        fetchedPosts.forEach((post: GhostPost) => {
+          const categoryTag = post.tags.find((tag) => tag.name !== "#krispuremath" && tag.name !== "krismathblog-notes")
+          const category = categoryTag ? categoryTag.name : "Uncategorized"
 
-  const res = await fetch(url.toString())
-  if (!res.ok) {
-    throw new Error("Failed to fetch posts")
-  }
-  const data = await res.json()
-  return data.posts
-}
+          if (!groupedPosts[category]) {
+            groupedPosts[category] = []
+          }
+          groupedPosts[category].push(post)
+        })
 
-export default async function NotesPage() {
-  let posts: GhostPost[] = []
-  let error: string | null = null
-  const categories: { [key: string]: GhostPost[] } = {}
-
-  try {
-    console.log("Fetching posts for Notes page...")
-    posts = await getNotesPosts()
-    console.log("Fetched posts for Notes page:", posts.length)
-
-    // Group posts by category (third tag)
-    posts.forEach((post) => {
-      const categoryTag = post.tags.find((tag) => tag.name !== "#krispuremath" && tag.name !== "krismathblog-notes")
-      const category = categoryTag ? categoryTag.name : "Uncategorized"
-
-      if (!categories[category]) {
-        categories[category] = []
+        setPosts(fetchedPosts)
+        setCategories(groupedPosts)
+      } catch (err) {
+        console.error("Error in Notes component:", err)
+        setError(err instanceof Error ? err.message : "An error occurred while fetching posts.")
+      } finally {
+        setIsLoading(false)
       }
-      categories[category].push(post)
-    })
+    }
 
-    console.log("Categorized posts:", Object.keys(categories).length)
-  } catch (err) {
-    console.error("Error in Notes component:", err)
-    error = err instanceof Error ? err.message : "An error occurred while fetching posts."
+    fetchPosts()
+  }, [])
+
+  // Calculate grid layout for categories
+  const categoryNames = Object.keys(categories)
+  const topRowCount = Math.ceil(categoryNames.length / 2)
+
+  if (isLoading) {
+    return (
+      <main className="min-h-screen px-4 py-8 bg-background text-foreground">
+        <div className="max-w-2xl mx-auto">
+          <p className="text-center text-muted-foreground">Loading notes...</p>
+        </div>
+      </main>
+    )
   }
 
   return (
@@ -69,37 +79,76 @@ export default async function NotesPage() {
 
       <div className="max-w-2xl mx-auto">
         <h1 className="text-2xl font-normal mb-8">Notes</h1>
-        <div className="space-y-4">
-          {error ? (
-            <p className="text-destructive">{error}</p>
-          ) : Object.keys(categories).length > 0 ? (
-            Object.entries(categories).map(([category, categoryPosts]) => (
-              <Collapsible.Root key={category} className="border border-border rounded-lg">
-                <Collapsible.Trigger className="flex items-center justify-between w-full p-4 text-left">
-                  <h2 className="text-lg font-medium capitalize">{category}</h2>
-                  <ChevronDown className="h-5 w-5 text-muted-foreground transition-transform duration-200" />
-                </Collapsible.Trigger>
-                <Collapsible.Content>
-                  <ul className="p-4 pt-0 space-y-2">
-                    {categoryPosts.map((post) => (
-                      <li key={post.slug} className="flex items-center">
-                        <ChevronRight className="h-4 w-4 text-muted-foreground mr-2" />
-                        <Link
-                          href={`/notes/${post.slug}`}
-                          className="text-foreground hover:text-muted-foreground transition-colors"
-                        >
-                          {post.title}
-                        </Link>
-                      </li>
+
+        {error ? (
+          <p className="text-destructive">{error}</p>
+        ) : categoryNames.length > 0 ? (
+          <>
+            {/* Category filters */}
+            <div className="mb-8">
+              <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-2">
+                  {categoryNames.slice(0, topRowCount).map((category) => (
+                    <button
+                      key={category}
+                      onClick={() => setSelectedCategory(category === selectedCategory ? null : category)}
+                      className={`p-2 text-sm rounded-md transition-colors ${
+                        category === selectedCategory
+                          ? "bg-primary text-primary-foreground"
+                          : "bg-muted hover:bg-muted/80"
+                      }`}
+                    >
+                      {category}
+                    </button>
+                  ))}
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  {categoryNames.slice(topRowCount).map((category) => (
+                    <button
+                      key={category}
+                      onClick={() => setSelectedCategory(category === selectedCategory ? null : category)}
+                      className={`p-2 text-sm rounded-md transition-colors ${
+                        category === selectedCategory
+                          ? "bg-primary text-primary-foreground"
+                          : "bg-muted hover:bg-muted/80"
+                      }`}
+                    >
+                      {category}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Notes list */}
+            <div className="space-y-8">
+              {(selectedCategory ? [selectedCategory] : categoryNames).map((category) => (
+                <div key={category}>
+                  <div className="grid gap-4">
+                    {categories[category].map((post) => (
+                      <Link
+                        key={post.slug}
+                        href={`/notes/${post.slug}`}
+                        className="p-4 rounded-lg border bg-card hover:bg-accent/50 transition-colors"
+                      >
+                        <h3 className="font-medium mb-2">{post.title}</h3>
+                        <p className="text-sm text-muted-foreground">
+                          {new Date(post.published_at).toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                          })}
+                        </p>
+                      </Link>
                     ))}
-                  </ul>
-                </Collapsible.Content>
-              </Collapsible.Root>
-            ))
-          ) : (
-            <p className="text-muted-foreground">No notes available at the moment. Check back soon!</p>
-          )}
-        </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </>
+        ) : (
+          <p className="text-muted-foreground">No notes available at the moment. Check back soon!</p>
+        )}
       </div>
       <CommandMenu />
     </main>

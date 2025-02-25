@@ -1,7 +1,8 @@
-import Link from 'next/link'
-import { notFound } from 'next/navigation'
-import { ContentRenderer } from '@/components/ContentRenderer'
-import { CommandMenu } from '@/components/command-menu'
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import { ContentRenderer } from '@/components/ContentRenderer';
+import { CommandMenu } from '@/components/command-menu';
+import { TableOfContents } from '@/components/TableOfContents'; // Import TableOfContents
 
 const apiKey = process.env.GHOST_CONTENT_API_KEY;
 const apiUrl = process.env.GHOST_API_URL;
@@ -9,7 +10,7 @@ const apiUrl = process.env.GHOST_API_URL;
 export const dynamic = 'force-dynamic'; // Force dynamic rendering
 
 export default async function BlogPost({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+  const { slug } = await params; // Await the params object
 
   if (!slug) {
     console.error('No post slug found in URL.');
@@ -44,7 +45,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
     const postDate = new Date(post.published_at).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
-      day: 'numeric'
+      day: 'numeric',
     });
 
     const categories = post.tags
@@ -71,6 +72,9 @@ export default async function BlogPost({ params }: { params: { slug: string } })
             <span className="mx-2">•</span>
             <span>{postDate}</span>
           </div>
+
+          {/* Table of Contents */}
+          <TableOfContents content={post.html} />
 
           {/* Render post content */}
           <ContentRenderer content={post.html} />
@@ -114,3 +118,4 @@ export async function generateStaticParams() {
     return [];
   }
 }
+
