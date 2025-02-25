@@ -108,6 +108,10 @@ export default function TheoremsPage() {
 
       <div className="max-w-2xl mx-auto">
         <h1 className="text-2xl font-normal mb-8">Theorems</h1>
+        <p className="text-sm text-muted-foreground mb-8">
+        The theorems on this page are practice problems from various books, with my own proofs and solutions. 
+        The sources are referenced, the formal proof is available in LaTeX, and the code for the proofs is written in Lean4.
+          </p>
 
         <div className="space-y-4 mb-8">
           <Input
