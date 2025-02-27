@@ -46,7 +46,8 @@ export function WorkbookCard({ cover, name, subtitle, author, status, onClick }:
     >
       <div className="w-[80px] bg-muted p-3">
         <div className="relative h-[80px] w-full">
-          <Image src={cover || "/placeholder.svg"} alt={name} fill className="object-cover rounded-sm" />
+          {/* Adjust the Image component to use object-contain for full visibility */}
+          <Image src={cover || "/placeholder.svg"} alt={name} layout="fill" objectFit="contain" className="rounded-sm" />
         </div>
       </div>
       <div className="flex-1 p-3 overflow-hidden">

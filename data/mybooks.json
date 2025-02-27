@@ -1,0 +1,61 @@
+[
+    {
+      "id": "1",
+      "cover": "/mybooks/calculus-by-krisyotam.jpg",
+      "name": "Calculus",
+      "subtitle": "An Introduction to Calculus",
+      "author": "Kris Yotam",
+      "datePublished": "2025-01-01",
+      "subject": "Calculus",
+      "categories": ["Differential Calculus", "Integral Calculus"],
+      "latex_link": "/downloads/calculus-latex.zip",
+      "pdf_link": "/downloads/calculus.pdf",
+      "description": "A fundamental workbook covering concepts in calculus, including limits, differentiation, and integration.",
+      "status": "que"
+    },
+    {
+      "id": "2",
+      "cover": "/mybooks/algebra.jpg",
+      "name": "Algebra",
+      "subtitle": "Mastering Algebraic Techniques",
+      "author": "Kris Yotam",
+      "datePublished": "2025-01-01",
+      "subject": "Algebra",
+      "categories": ["Linear Algebra", "Abstract Algebra"],
+      "latex_link": "/downloads/algebra-latex.zip",
+      "pdf_link": "/downloads/algebra.pdf",
+      "description": "A comprehensive guide to algebra, covering fundamental operations, equations, and advanced algebraic structures.",
+      "status": "active"
+    },
+    {
+      "id": "3",
+      "cover": "/mybooks/geometry.jpg",
+      "name": "Geometry",
+      "subtitle": "Exploring Shapes and Spaces",
+      "author": "Kris Yotam",
+      "datePublished": "2025-01-01",
+      "subject": "Geometry",
+      "categories": ["Euclidean Geometry", "Analytic Geometry"],
+      "latex_link": "/downloads/geometry-latex.zip",
+      "pdf_link": "/downloads/geometry.pdf",
+      "description": "A detailed workbook on geometric principles, including theorems, proofs, and real-world applications.",
+      "status": "que"
+    },
+    {
+      "id": "4",
+      "cover": "/mybooks/precalculus-by-krisyotam.jpg",
+      "name": "Precalculus",
+      "subtitle": "Exploring Functions and Limits",
+      "author": "Kris Yotam",
+      "datePublished": "2025-01-01",
+      "subject": "Precalculus",
+      "categories": ["Right Triangle Trigonometry", "Circular Functions"],
+      "latex_link": "/downloads/trigonometry-latex.zip",
+      "pdf_link": "/downloads/trigonometry.pdf",
+      "description": "A focused guide to key precalculus concepts, including functions, algebra, and limits, to prepare for calculus.",
+      "status": "que"
+    }
+  ]
+  
+  
+  

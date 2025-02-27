@@ -1,0 +1,69 @@
+{
+    "mathematicians": [
+     {
+        "name": "Lisa Piccirilo",
+        "link": "https://sites.google.com/view/lpiccirillo/home",
+        "disciplines": ["Geometry", "Low-dimensional Topology"],
+        "category": "Topology",
+        "tags": ["dynamical systems", "ergodic theory", "number theory"]
+      },
+      {
+        "name": "Hong Wang",
+        "link": "https://sites.google.com/view/hongwang",
+        "disciplines": ["Harmonic Analysis", "Homogeneous Dynamics", "Number Theory"],
+        "category": "Analysis",
+        "tags": ["dynamical systems", "ergodic theory", "number theory"]
+      },
+      {
+        "name": "Terence Tao",
+        "link": "https://www.math.ucla.edu/~tao/",
+        "disciplines": ["Harmonic Analysis", "Partial Differential Equations", "Combinatorics"],
+        "category": "Analysis",
+        "tags": ["pde", "combinatorics", "number theory"]
+      },
+      {
+        "name": "June Huh",
+        "link": "https://web.math.princeton.edu/~huh/",
+        "disciplines": ["Algebraic Geometry", "Combinatorial Mathematics"],
+        "category": "Geometry",
+        "tags": ["hodge theory", "matroids", "combinatorics"]
+      },
+      {
+        "name": "Peter Scholze",
+        "link": "https://www.math.uni-bonn.de/people/scholze/",
+        "disciplines": ["Arithmetic Geometry", "Number Theory"],
+        "category": "Number Theory",
+        "tags": ["perfectoid spaces", "p-adic geometry", "cohomology"]
+      },
+      {
+        "name": "Maryna Viazovska",
+        "link": "https://people.epfl.ch/maryna.viazovska",
+        "disciplines": ["Number Theory", "Sphere Packing", "Modular Forms"],
+        "category": "Number Theory",
+        "tags": ["sphere packing", "modular forms", "optimization"]
+      },
+      {
+        "name": "Jacob Lurie",
+        "link": "https://www.math.ias.edu/~lurie/",
+        "disciplines": ["Higher Category Theory", "Algebraic Geometry", "Topology"],
+        "category": "Category Theory",
+        "tags": ["higher categories", "derived algebraic geometry", "topological quantum field theory"]
+      },
+      {
+        "name": "Akshay Venkatesh",
+        "link": "https://math.ias.edu/~venkatesh/",
+        "disciplines": ["Number Theory", "Automorphic Forms", "Dynamics"],
+        "category": "Number Theory",
+        "tags": ["automorphic forms", "ergodic theory", "representation theory"]
+      },
+      {
+        "name": "Claire Voisin",
+        "link": "https://www.math.ens.fr/~voisin/",
+        "disciplines": ["Algebraic Geometry", "Complex Geometry", "Hodge Theory"],
+        "category": "Geometry",
+        "tags": ["hodge theory", "mirror symmetry", "algebraic cycles"]
+      }
+    ]
+  }
+  
+  

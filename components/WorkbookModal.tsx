@@ -38,11 +38,13 @@ export function WorkbookModal({ isOpen, onClose, workbook, status }: WorkbookMod
         <div className="grid gap-4 py-4">
           <div className="flex justify-center">
             <div className="relative h-[240px] w-[160px]">
+              {/* Ensure the image is fully visible without cropping */}
               <Image
                 src={workbook.cover || "/placeholder.svg"}
                 alt={workbook.name}
-                fill
-                className="object-cover rounded-md"
+                layout="fill"
+                objectFit="contain"
+                className="rounded-md"
               />
             </div>
           </div>

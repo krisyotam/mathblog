@@ -45,6 +45,7 @@ export function CommandMenu() {
       { icon: Clock, label: "Now", action: () => router.push("/now") },
       { icon: Sigma, label: "Theorems", action: () => router.push("/theorems") },
       { icon: Book, label: "Workbooks", action: () => router.push("/workbooks") },
+      { icon: Book, label: "My Books", action: () => router.push("/mybooks") },
       { icon: FileText, label: "Lecture Notes", action: () => router.push("/lecture-notes") },
       { icon: GraduationCap, label: "Courses", action: () => router.push("/courses") },
       { icon: School, label: "Research", action: () => router.push("/research") },
