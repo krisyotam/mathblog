@@ -1,0 +1,78 @@
+[
+    {
+      "id": 1,
+      "img": "/placeholder.svg?height=300&width=500",
+      "title": "MIT Integration Bee Qualifying Exam",
+      "subject": "Integral Calculus",
+      "description": "MIT Integration Bee Qualifying Exam (January 21, 2025)",
+      "difficulty": "Intermediate",
+      "problemCount": 20,
+      "pdfUrl": "/problem-sets/sets/mit-integration-bee-qualifying-exam-jan21-2025.pdf",
+      "date": "2025-01-21",
+      "author": "MIT",
+      "category": "Integral Calculus",
+      "tags": ["Integral Calculus", "Definite Integrals", "Indefinite Integrals", "Techniques of Integration", "Substitution", "Integration by Parts", "Trigonometric Integrals", "Improper Integrals", "Logarithmic Functions", "Exponential Functions", "Hyperbolic Functions", "Series and Summation", "Special Functions", "Floor Functions", "Advanced Calculus", "Mathematical Competition"],
+      "status": "solved"
+    },
+    {
+      "id": 2,
+      "img": "/placeholder.svg?height=300&width=500",
+      "title": "Advanced Abstract Algebra",
+      "subject": "Abstract Algebra",
+      "description": "Challenging problem set exploring group theory, rings, and fields.",
+      "difficulty": "Advanced",
+      "problemCount": 12,
+      "pdfUrl": "/problem-sets/sets/mit-integration-bee-qualifying-exam-jan21-2025.pdf",
+      "date": "2025-03-15",
+      "author": "Kris Yotam",
+      "category": "Abstract Algebra",
+      "tags": ["Group Theory", "Ring Theory", "Field Theory"],
+      "status": "open"
+    },
+    {
+      "id": 3,
+      "img": "/placeholder.svg?height=300&width=500",
+      "title": "Topology Practice",
+      "subject": "Topology",
+      "description": "Problems focused on topological spaces, continuous functions, and compactness.",
+      "difficulty": "Intermediate",
+      "problemCount": 20,
+      "pdfUrl": "/problem-sets/sets/mit-integration-bee-qualifying-exam-jan21-2025.pdf",
+      "date": "2025-03-20",
+      "author": "Kris Yotam",
+      "category": "Topology",
+      "tags": ["Topological Spaces", "Continuous Functions", "Compactness"],
+      "status": "solved"
+    },
+    {
+      "id": 4,
+      "img": "/placeholder.svg?height=300&width=500",
+      "title": "Real Analysis Problem Set",
+      "subject": "Real Analysis",
+      "description": "Explores the concepts of limits, sequences, series, and continuity.",
+      "difficulty": "Advanced",
+      "problemCount": 10,
+      "pdfUrl": "/problem-sets/sets/mit-integration-bee-qualifying-exam-jan21-2025.pdf",
+      "date": "2025-03-25",
+      "author": "Kris Yotam",
+      "category": "Real Analysis",
+      "tags": ["Limits", "Sequences", "Continuity", "Series"],
+      "status": "open"
+    },
+    {
+      "id": 5,
+      "img": "/placeholder.svg?height=300&width=500",
+      "title": "Complex Analysis Challenges",
+      "subject": "Complex Analysis",
+      "description": "A set of problems exploring complex functions, contour integration, and analytic continuation.",
+      "difficulty": "Intermediate",
+      "problemCount": 18,
+      "pdfUrl": "/problem-sets/sets/mit-integration-bee-qualifying-exam-jan21-2025.pdf",
+      "date": "2025-03-30",
+      "author": "Kris Yotam",
+      "category": "Complex Analysis",
+      "tags": ["Complex Functions", "Contour Integration", "Analytic Continuation"],
+      "status": "open"
+    }
+  ]
+  

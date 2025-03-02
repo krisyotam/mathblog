@@ -1,0 +1,78 @@
+[
+    {
+      "id": 1,
+      "img": "/placeholder.svg?height=300&width=500",
+      "title": "Calculus Midterm",
+      "subject": "Pure Mathematics",
+      "description": "Test your understanding of limits, derivatives, and integrals with this comprehensive midterm exam.",
+      "duration": "90 minutes",
+      "questionCount": 25,
+      "previewLink": "#",
+      "startLink": "#",
+      "date": "2025-03-15",
+      "author": "Kris Yotam",
+      "category": "Exam",
+      "tags": ["Limits", "Derivatives", "Integrals"]
+    },
+    {
+      "id": 2,
+      "img": "/placeholder.svg?height=300&width=500",
+      "title": "Abstract Algebra Final",
+      "subject": "Pure Mathematics",
+      "description": "Comprehensive exam covering group theory, rings, and field theory.",
+      "duration": "120 minutes",
+      "questionCount": 30,
+      "previewLink": "#",
+      "startLink": "#",
+      "date": "2025-03-20",
+      "author": "Kris Yotam",
+      "category": "Final Exam",
+      "tags": ["Group Theory", "Ring Theory", "Field Theory"]
+    },
+    {
+      "id": 3,
+      "img": "/placeholder.svg?height=300&width=500",
+      "title": "Real Analysis Quiz",
+      "subject": "Pure Mathematics",
+      "description": "Quick assessment of sequences, series, and continuity concepts in real analysis.",
+      "duration": "45 minutes",
+      "questionCount": 15,
+      "previewLink": "#",
+      "startLink": "#",
+      "date": "2025-03-10",
+      "author": "Kris Yotam",
+      "category": "Quiz",
+      "tags": ["Sequences", "Series", "Continuity"]
+    },
+    {
+      "id": 4,
+      "img": "/placeholder.svg?height=300&width=500",
+      "title": "Topology Exam",
+      "subject": "Pure Mathematics",
+      "description": "Comprehensive test on topological spaces, continuity, and compactness.",
+      "duration": "100 minutes",
+      "questionCount": 40,
+      "previewLink": "#",
+      "startLink": "#",
+      "date": "2025-03-25",
+      "author": "Kris Yotam",
+      "category": "Exam",
+      "tags": ["Topological Spaces", "Continuity", "Compactness"]
+    },
+    {
+      "id": 5,
+      "img": "/placeholder.svg?height=300&width=500",
+      "title": "Complex Analysis Test",
+      "subject": "Pure Mathematics",
+      "description": "Practical assessment of contour integration, analytic functions, and complex variable theory.",
+      "duration": "60 minutes",
+      "questionCount": 20,
+      "previewLink": "#",
+      "startLink": "#",
+      "date": "2025-03-30",
+      "author": "Kris Yotam",
+      "category": "Test",
+      "tags": ["Contour Integration", "Analytic Functions", "Complex Variables"]
+    }
+  ]
+  

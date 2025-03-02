@@ -18,6 +18,7 @@ import {
   Sigma,
   GraduationCap,
   School,
+  DraftingCompass,
 } from "lucide-react"
 import { useTheme } from "./theme-provider"
 
@@ -44,9 +45,10 @@ export function CommandMenu() {
       { icon: FileText, label: "Index", action: () => router.push("/blog") },
       { icon: Clock, label: "Now", action: () => router.push("/now") },
       { icon: Sigma, label: "Theorems", action: () => router.push("/theorems") },
-      { icon: Book, label: "Workbooks", action: () => router.push("/workbooks") },
+      { icon: Book, label: "Workbooks", action: () => router.push("/workbooks") },     
       { icon: Book, label: "My Books", action: () => router.push("/mybooks") },
       { icon: FileText, label: "Lecture Notes", action: () => router.push("/lecture-notes") },
+      { icon: DraftingCompass, label: "Problem Sets", action: () => router.push("/problem-sets") },
       { icon: GraduationCap, label: "Courses", action: () => router.push("/courses") },
       { icon: School, label: "Research", action: () => router.push("/research") },
     ],
