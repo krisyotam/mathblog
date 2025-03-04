@@ -40,7 +40,7 @@ export function CommandMenu() {
   const closeMenu = () => setIsOpen(false)
 
   const items: { [key: string]: CommandItem[] } = {
-    Pages: [
+    Content: [
       { icon: Home, label: "Home", action: () => router.push("/") },
       { icon: FileText, label: "Index", action: () => router.push("/blog") },
       { icon: Clock, label: "Now", action: () => router.push("/now") },
@@ -49,12 +49,13 @@ export function CommandMenu() {
       { icon: Book, label: "My Books", action: () => router.push("/mybooks") },
       { icon: FileText, label: "Lecture Notes", action: () => router.push("/lecture-notes") },
       { icon: DraftingCompass, label: "Problem Sets", action: () => router.push("/problem-sets") },
-      { icon: GraduationCap, label: "Courses", action: () => router.push("/courses") },
-      { icon: School, label: "Research", action: () => router.push("/research") },
     ],
-    Info: [
-      { icon: Mic, label: "Talks", action: () => router.push("/talks") },
+    Work: [
+      { icon: GraduationCap, label: "Courses", action: () => router.push("/courses") },
       { icon: Book, label: "Notes", action: () => router.push("/notes") },
+      { icon: Briefcase, label: "Career", action: () => router.push("/career") },
+      { icon: School, label: "Research", action: () => router.push("/research") },
+      { icon: Mic, label: "Talks", action: () => router.push("/talks") },
       { icon: User, label: "About", action: () => router.push("/about") },
       { icon: Briefcase, label: "Work", action: () => router.push("/work") },
       { icon: Mail, label: "Contact", action: () => router.push("/contact") },

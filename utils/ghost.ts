@@ -5,6 +5,7 @@ const apiKey = process.env.GHOST_CONTENT_API_KEY;
 const apiUrl = process.env.GHOST_API_URL;
 
 export type GhostPost = {
+  [x: string]: string;
   id: string
   slug: string
   title: string

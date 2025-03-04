@@ -121,11 +121,11 @@ export default function AboutPage() {
             </a>
             .
           </p>
-          <p>When I'm not coding or pondering mathematical structures, you can find me:</p>
+          <p>When I'm not engaged in research, you can find me:</p>
           <ul className="list-disc list-inside space-y-2 ml-4">
             <li>Writing about the philosophy of mathematics on my blog.</li>
             <li>Pursuing random DIY projects, documented at <a href="http://krisyotam.com" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">krisyotam.com</a>.</li>
-            <li>Learning new skills and writing articles, which can be found on the site above!</li>
+            <li>Grinding out problems on <a href="https://artofproblemsolving.com/community/my-aops" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">ALCUMUS</a>, or engaged in building <a href="/courses" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">courses.</a></li>
           </ul>
           <p>
             I'm always eager to connect with like-minded individuals and explore new ideas. Feel free to reach out if
